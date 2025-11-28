@@ -42,46 +42,88 @@ function speak(text) {
     return;
   }
 
+  console.log('Attempting to speak:', text);
+
   // Cancel any ongoing speech
   window.speechSynthesis.cancel();
 
-  // Wait a tiny bit for cancel to complete
-  setTimeout(() => {
-    const utter = new SpeechSynthesisUtterance(text);
-    utter.rate = 0.9; // slightly slower
-    utter.pitch = 1;
-    utter.volume = 1; // max volume
+  // Chrome bug fix: resume if paused
+  if (window.speechSynthesis.paused) {
+    window.speechSynthesis.resume();
+  }
 
-    // Try to get voices and select an English one
-    const voices = window.speechSynthesis.getVoices();
-    if (voices.length > 0) {
-      // Prefer US English voices
-      const englishVoice = voices.find(v => v.lang.startsWith('en-US')) ||
-                           voices.find(v => v.lang.startsWith('en')) ||
-                           voices[0];
+  // Create utterance
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.rate = 0.85; // slightly slower for clarity
+  utter.pitch = 1;
+  utter.volume = 1;
+  utter.lang = 'en-US';
+
+  // Get voices
+  let voices = window.speechSynthesis.getVoices();
+  console.log('Available voices:', voices.length);
+
+  if (voices.length > 0) {
+    // Try to find a good English voice
+    const englishVoice = voices.find(v => v.lang === 'en-US' && v.localService === true) ||
+                         voices.find(v => v.lang === 'en-US') ||
+                         voices.find(v => v.lang.startsWith('en')) ||
+                         voices[0];
+    if (englishVoice) {
       utter.voice = englishVoice;
+      console.log('Using voice:', englishVoice.name);
     }
+  }
 
-    // Add error handler
-    utter.onerror = (event) => {
-      console.error('Speech synthesis error:', event);
-    };
+  // Event handlers for debugging
+  utter.onstart = () => {
+    console.log('Speech started');
+  };
 
-    window.speechSynthesis.speak(utter);
+  utter.onend = () => {
+    console.log('Speech ended');
+  };
+
+  utter.onerror = (event) => {
+    console.error('Speech error:', event.error, event);
+    alert('Speech error: ' + event.error + '. Please check browser permissions.');
+  };
+
+  // Speak
+  console.log('Calling speechSynthesis.speak()');
+  window.speechSynthesis.speak(utter);
+
+  // Chrome workaround: if not speaking after 100ms, try again
+  setTimeout(() => {
+    if (!window.speechSynthesis.speaking && !window.speechSynthesis.pending) {
+      console.log('Speech did not start, retrying...');
+      window.speechSynthesis.speak(utter);
+    }
   }, 100);
+}
+
+// Voice loading - crucial for Chrome
+let voicesLoaded = false;
+
+function loadVoices() {
+  const voices = window.speechSynthesis.getVoices();
+  console.log('Voices loaded:', voices.length);
+  if (voices.length > 0) {
+    voicesLoaded = true;
+  }
+  return voices;
 }
 
 // Ensure voices are loaded
 if (window.speechSynthesis) {
-  // This triggers the voice loading
-  window.speechSynthesis.getVoices();
+  loadVoices();
 
-  // Some browsers need this event listener
   if (speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = () => {
-      window.speechSynthesis.getVoices();
-    };
+    speechSynthesis.onvoiceschanged = loadVoices;
   }
+
+  // Force load voices for Chrome
+  setTimeout(loadVoices, 100);
 }
 
 function pickRandomWord() {
