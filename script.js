@@ -41,11 +41,47 @@ function speak(text) {
     alert("Speech not supported in this browser.");
     return;
   }
-  const utter = new SpeechSynthesisUtterance(text);
-  utter.rate = 0.9; // slightly slower
-  utter.pitch = 1;
+
+  // Cancel any ongoing speech
   window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utter);
+
+  // Wait a tiny bit for cancel to complete
+  setTimeout(() => {
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.rate = 0.9; // slightly slower
+    utter.pitch = 1;
+    utter.volume = 1; // max volume
+
+    // Try to get voices and select an English one
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length > 0) {
+      // Prefer US English voices
+      const englishVoice = voices.find(v => v.lang.startsWith('en-US')) ||
+                           voices.find(v => v.lang.startsWith('en')) ||
+                           voices[0];
+      utter.voice = englishVoice;
+    }
+
+    // Add error handler
+    utter.onerror = (event) => {
+      console.error('Speech synthesis error:', event);
+    };
+
+    window.speechSynthesis.speak(utter);
+  }, 100);
+}
+
+// Ensure voices are loaded
+if (window.speechSynthesis) {
+  // This triggers the voice loading
+  window.speechSynthesis.getVoices();
+
+  // Some browsers need this event listener
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = () => {
+      window.speechSynthesis.getVoices();
+    };
+  }
 }
 
 function pickRandomWord() {
