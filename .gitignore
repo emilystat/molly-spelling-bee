@@ -1,0 +1,14 @@
+# Development utilities
+fetch-definitions.html
+words-raw.js
+manual-definitions.js
+
+# System files
+.DS_Store
+.vscode/
+
+# Mac OS
+._*
+
+# Claude
+.claude/

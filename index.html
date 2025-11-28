@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Spelling Bee Practice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="bee-header">
+    <div class="bee-logo">🐝</div>
+    <div>
+      <h1>Spelling Bee Practice</h1>
+      <p>6th Grade Word Practice</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <div class="mode-row">
+        <label for="modeSelect">Mode:</label>
+        <select id="modeSelect">
+          <option value="practice">Practice</option>
+          <option value="quiz">Quiz (10 words)</option>
+        </select>
+        <button id="startQuizBtn">Start</button>
+      </div>
+
+      <div class="difficulty-filter">
+        <label for="difficultySelect">Difficulty:</label>
+        <select id="difficultySelect">
+          <option value="all">All Words</option>
+          <option value="oneBee">One Bee (Easy) 🐝</option>
+          <option value="twoBee">Two Bee (Medium) 🐝🐝</option>
+          <option value="threeBee">Three Bee (Hard) 🐝🐝🐝</option>
+        </select>
+      </div>
+
+      <div class="word-controls">
+        <button id="playWordBtn">🐝 Play Word</button>
+        <button id="repeatBtn">🔁 Repeat</button>
+        <button id="hintBtn">💡 Hint</button>
+      </div>
+
+      <div class="input-row">
+        <input
+          id="answerInput"
+          type="text"
+          autocomplete="off"
+          placeholder="Type the spelling here"
+        />
+        <button id="checkBtn">Check</button>
+      </div>
+
+      <p id="resultText" class="result-text"></p>
+
+      <div class="info">
+        <p>
+          <strong>Definition:</strong>
+          <span id="definitionText">Click “Play Word” to begin.</span>
+        </p>
+        <p>
+          <strong>Sentence:</strong>
+          <span id="sentenceText"></span>
+        </p>
+      </div>
+
+      <div class="score-row">
+        <span id="scoreText">Score: 0 / 0</span>
+        <span id="progressText"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Spelling Bee Practice &middot; Made with 🐝 for Molly
+  </footer>
+
+  <script src="words-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

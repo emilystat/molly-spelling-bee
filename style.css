@@ -1,0 +1,200 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #fffbea;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.bee-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(90deg, #ffeb3b, #ffc107);
+  border-bottom: 4px solid #222;
+}
+
+.bee-logo {
+  font-size: 2.5rem;
+}
+
+.bee-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.bee-header p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Main layout */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  background: #fffdf3;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  border: 2px solid #ffca28;
+}
+
+/* Controls */
+.mode-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.mode-row label {
+  font-weight: 600;
+}
+
+.mode-row select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+}
+
+.difficulty-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.75rem;
+  background: #fff8e1;
+  border-radius: 12px;
+  border: 1px dashed #ffca28;
+}
+
+.difficulty-filter label {
+  font-weight: 600;
+}
+
+.difficulty-filter select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 0.9rem;
+}
+
+button {
+  border-radius: 999px;
+  border: none;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+  background: #ffca28;
+  color: #222;
+  transition: transform 0.05s ease, box-shadow 0.05s ease, background 0.1s ease;
+}
+
+button:hover {
+  background: #ffb300;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.word-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+#answerInput {
+  flex: 1 1 180px;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+/* Result and info */
+.result-text {
+  min-height: 1.5em;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.result-text.correct {
+  color: #2e7d32;
+}
+
+.result-text.incorrect {
+  color: #c62828;
+}
+
+.info {
+  background: #fff8e1;
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  border: 1px dashed #ffca28;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.info p + p {
+  margin-top: 0.3rem;
+}
+
+/* Score */
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.8rem;
+  color: #666;
+  border-top: 1px solid #f3e5f5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    padding: 1.2rem;
+  }
+
+  .bee-header h1 {
+    font-size: 1.3rem;
+  }
+}
