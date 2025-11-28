@@ -340,6 +340,6 @@ difficultySelect.addEventListener("change", () => {
 });
 
 updateScoreDisplay();
-resultText.textContent = "Choose a mode and click "Play Word" or "Start" to begin.";
+resultText.textContent = 'Choose a mode and click "Play Word" or "Start" to begin.';
 definitionText.textContent = "Definitions and sentences will appear after you check your answer.";
 sentenceText.textContent = "";
