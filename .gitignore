@@ -12,3 +12,6 @@ manual-definitions.js
 
 # Claude
 .claude/
+
+# Planning documents (local only)
+Plan.md
