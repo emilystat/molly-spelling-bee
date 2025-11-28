@@ -25,6 +25,7 @@ const repeatBtn = document.getElementById("repeatBtn");
 const hintBtn = document.getElementById("hintBtn");
 const answerInput = document.getElementById("answerInput");
 const checkBtn = document.getElementById("checkBtn");
+const nextWordBtn = document.getElementById("nextWordBtn");
 
 const resultText = document.getElementById("resultText");
 const definitionText = document.getElementById("definitionText");
@@ -152,6 +153,8 @@ function setCurrentWord(wordObj) {
 
   definitionText.textContent = "Listen to the word and try spelling it.";
   sentenceText.textContent = "";
+
+  hideNextWordButton();
 }
 
 function updateScoreDisplay() {
@@ -161,6 +164,14 @@ function updateScoreDisplay() {
   } else {
     progressText.textContent = "";
   }
+}
+
+function showNextWordButton() {
+  nextWordBtn.style.display = "block";
+}
+
+function hideNextWordButton() {
+  nextWordBtn.style.display = "none";
 }
 
 // =============================
@@ -210,6 +221,7 @@ function loadQuizWord() {
     definitionText.textContent = "You can switch back to Practice mode or start a new quiz.";
     sentenceText.textContent = "";
     progressText.textContent = "";
+    hideNextWordButton();
     return;
   }
 
@@ -285,18 +297,19 @@ checkBtn.addEventListener("click", () => {
 
   updateScoreDisplay();
 
+  // Show the Next Word button after checking
+  showNextWordButton();
+});
+
+nextWordBtn.addEventListener("click", () => {
   if (currentMode === "quiz") {
-    setTimeout(() => {
-      quizIndex += 1;
-      loadQuizWord();
-    }, 1200);
+    quizIndex += 1;
+    loadQuizWord();
   } else {
-    setTimeout(() => {
-      const wordObj = pickRandomWord();
-      if (!wordObj) return;
-      setCurrentWord(wordObj);
-      speak(`Spell the word: ${wordObj.word}`);
-    }, 1200);
+    const wordObj = pickRandomWord();
+    if (!wordObj) return;
+    setCurrentWord(wordObj);
+    speak(`Spell the word: ${wordObj.word}`);
   }
 });
 
