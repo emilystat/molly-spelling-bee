@@ -1811,37 +1811,37 @@ const wordsData = {
     {
       "word": "gangly",
       "definition": "Tall and thin, especially so as to cause physical awkwardness.",
-      "sentence": "The word \"gangly\" is used in everyday language.",
+      "sentence": "The gangly teenager bumped his head on the doorframe.",
       "difficulty": "threeBee"
     },
     {
       "word": "swaggering",
       "definition": "To walk with a swaying motion; hence, to walk and act in a pompous, consequential manner.",
-      "sentence": "The word \"swaggering\" is used in everyday language.",
+      "sentence": "The swaggering athlete walked confidently onto the field.",
       "difficulty": "threeBee"
     },
     {
       "word": "chimneys",
       "definition": "A vertical tube or hollow column used to emit environmentally polluting gaseous and solid matter (including but not limited to by-products of burning carbon or hydrocarbon based fuels); a flue.",
-      "sentence": "The word \"chimneys\" is used in everyday language.",
+      "sentence": "Smoke billowed from the factory chimneys into the gray sky.",
       "difficulty": "threeBee"
     },
     {
       "word": "riveted",
       "definition": "To attach or fasten parts by using rivets.",
-      "sentence": "The word \"riveted\" is used in everyday language.",
+      "sentence": "The audience was riveted by the magician's performance.",
       "difficulty": "threeBee"
     },
     {
       "word": "plaid",
       "definition": "A type of twilled woollen cloth, often with a tartan or chequered pattern.",
-      "sentence": "The word \"plaid\" is used in everyday language.",
+      "sentence": "She wore a plaid skirt to the school assembly.",
       "difficulty": "threeBee"
     },
     {
       "word": "dirge",
       "definition": "A mournful poem or piece of music composed or performed as a memorial to a dead person.",
-      "sentence": "The word \"dirge\" is used in everyday language.",
+      "sentence": "The funeral procession moved slowly to the sound of a solemn dirge.",
       "difficulty": "threeBee"
     },
     {
@@ -1853,31 +1853,31 @@ const wordsData = {
     {
       "word": "whittled",
       "definition": "To cut or shape wood with a knife.",
-      "sentence": "The word \"whittled\" is used in everyday language.",
+      "sentence": "He whittled a small wooden bird from a piece of driftwood.",
       "difficulty": "threeBee"
     },
     {
       "word": "depots",
       "definition": "A storage facility, in particular, a warehouse.",
-      "sentence": "The word \"depots\" is used in everyday language.",
+      "sentence": "The military stored supplies in depots across the region.",
       "difficulty": "threeBee"
     },
     {
       "word": "fiberglass",
       "definition": "Silica based glass extruded into fibers that possess a length at least 1000 times greater than their width.",
-      "sentence": "The word \"fiberglass\" is used in everyday language.",
+      "sentence": "The boat hull was made of lightweight fiberglass.",
       "difficulty": "threeBee"
     },
     {
       "word": "salvaged",
       "definition": "(of property, people or situations at risk) to rescue.",
-      "sentence": "The word \"salvaged\" is used in everyday language.",
+      "sentence": "The crew salvaged valuable equipment from the sunken ship.",
       "difficulty": "threeBee"
     },
     {
       "word": "fissures",
       "definition": "A crack or opening, as in a rock.",
-      "sentence": "The word \"fissures\" is used in everyday language.",
+      "sentence": "Deep fissures appeared in the rock after the earthquake.",
       "difficulty": "threeBee"
     },
     {
@@ -1889,37 +1889,37 @@ const wordsData = {
     {
       "word": "discipline",
       "definition": "A controlled behaviour; self-control.",
-      "sentence": "The word \"discipline\" is used in everyday language.",
+      "sentence": "Success in sports requires discipline and dedication.",
       "difficulty": "threeBee"
     },
     {
       "word": "unfamiliar",
       "definition": "An unfamiliar person; a stranger.",
-      "sentence": "The word \"unfamiliar\" is used in everyday language.",
+      "sentence": "The unfamiliar surroundings made her feel nervous.",
       "difficulty": "threeBee"
     },
     {
       "word": "scurrying",
       "definition": "To run with quick light steps, to scamper.",
-      "sentence": "The word \"scurrying\" is used in everyday language.",
+      "sentence": "Mice were scurrying across the attic floor.",
       "difficulty": "threeBee"
     },
     {
       "word": "dignitaries",
       "definition": "An important or influential person, or one of high rank or position.",
-      "sentence": "The word \"dignitaries\" is used in everyday language.",
+      "sentence": "Foreign dignitaries attended the state dinner.",
       "difficulty": "threeBee"
     },
     {
       "word": "pizzeria",
       "definition": "A restaurant that bakes and sells pizzas.",
-      "sentence": "The word \"pizzeria\" is used in everyday language.",
+      "sentence": "We ordered takeout from the local pizzeria.",
       "difficulty": "threeBee"
     },
     {
       "word": "dismissal",
       "definition": "The act of sending someone away.",
-      "sentence": "The word \"dismissal\" is used in everyday language.",
+      "sentence": "The teacher's dismissal of the class was met with cheers.",
       "difficulty": "threeBee"
     },
     {
@@ -1931,55 +1931,55 @@ const wordsData = {
     {
       "word": "careened",
       "definition": "To heave a ship down on one side so as to expose the other, in order to clean it of barnacles and weed, or to repair it below the water line.",
-      "sentence": "The word \"careened\" is used in everyday language.",
+      "sentence": "The car careened off the icy road into a ditch.",
       "difficulty": "threeBee"
     },
     {
       "word": "nomination",
       "definition": "An act or instance of nominating.",
-      "sentence": "The word \"nomination\" is used in everyday language.",
+      "sentence": "She received a nomination for best actress.",
       "difficulty": "threeBee"
     },
     {
       "word": "opportunist",
       "definition": "Someone who takes advantage of any opportunity to advance their own situation, placing expediency above principle.",
-      "sentence": "The word \"opportunist\" is used in everyday language.",
+      "sentence": "The opportunist bought stocks when prices were low.",
       "difficulty": "threeBee"
     },
     {
       "word": "dictatorship",
       "definition": "A type of government where absolute sovereignty is allotted to an individual or a small clique.",
-      "sentence": "The word \"dictatorship\" is used in everyday language.",
+      "sentence": "Citizens fled the country to escape the dictatorship.",
       "difficulty": "threeBee"
     },
     {
       "word": "comrades",
       "definition": "A mate, companion, or associate.",
-      "sentence": "The word \"comrades\" is used in everyday language.",
+      "sentence": "The soldiers fought bravely alongside their comrades.",
       "difficulty": "threeBee"
     },
     {
       "word": "sporadic",
       "definition": "(of diseases) occurring in isolated instances; not epidemic.",
-      "sentence": "The word \"sporadic\" is used in everyday language.",
+      "sentence": "Sporadic rain showers continued throughout the afternoon.",
       "difficulty": "threeBee"
     },
     {
       "word": "promenade",
       "definition": "A prom (dance).",
-      "sentence": "The word \"promenade\" is used in everyday language.",
+      "sentence": "Couples strolled along the seaside promenade.",
       "difficulty": "threeBee"
     },
     {
       "word": "repugnant",
       "definition": "Offensive or repulsive; arousing disgust or aversion.",
-      "sentence": "The word \"repugnant\" is used in everyday language.",
+      "sentence": "The thought of cheating was repugnant to her.",
       "difficulty": "threeBee"
     },
     {
       "word": "invincible",
       "definition": "Someone or something that cannot be defeated, destroyed or killed.",
-      "sentence": "The word \"invincible\" is used in everyday language.",
+      "sentence": "The champion boxer seemed invincible in the ring.",
       "difficulty": "threeBee"
     },
     {
@@ -1991,13 +1991,13 @@ const wordsData = {
     {
       "word": "parachute",
       "definition": "A device, generally constructed from fabric, that is designed to employ air resistance to control the fall of an object.",
-      "sentence": "The word \"parachute\" is used in everyday language.",
+      "sentence": "The skydiver deployed her parachute at the right altitude.",
       "difficulty": "threeBee"
     },
     {
       "word": "laborious",
       "definition": "Requiring much physical effort; toilsome.",
-      "sentence": "The word \"laborious\" is used in everyday language.",
+      "sentence": "Copying the entire document by hand was laborious work.",
       "difficulty": "threeBee"
     },
     {
@@ -2015,55 +2015,55 @@ const wordsData = {
     {
       "word": "ratify",
       "definition": "To give formal consent to; make officially valid, sign off on.",
-      "sentence": "The word \"ratify\" is used in everyday language.",
+      "sentence": "Congress voted to ratify the treaty.",
       "difficulty": "threeBee"
     },
     {
       "word": "scalpel",
       "definition": "A small straight knife with a very sharp blade used for surgery, dissection and craftwork.",
-      "sentence": "The word \"scalpel\" is used in everyday language.",
+      "sentence": "The surgeon carefully made an incision with a scalpel.",
       "difficulty": "threeBee"
     },
     {
       "word": "reclusive",
       "definition": "Of, characterized by, or preferring privacy and isolation; secluded.",
-      "sentence": "The word \"reclusive\" is used in everyday language.",
+      "sentence": "The reclusive author rarely appeared in public.",
       "difficulty": "threeBee"
     },
     {
       "word": "compassionate",
       "definition": "To feel compassion (for someone or with regard to something); to regard (someone or something) with compassion.",
-      "sentence": "The word \"compassionate\" is used in everyday language.",
+      "sentence": "The nurse provided compassionate care to her patients.",
       "difficulty": "threeBee"
     },
     {
       "word": "bulletin",
       "definition": "A short report, especially one released through official channels to be broadcast or publicized.",
-      "sentence": "The word \"bulletin\" is used in everyday language.",
+      "sentence": "The principal posted a bulletin about the schedule change.",
       "difficulty": "threeBee"
     },
     {
       "word": "alfalfa",
       "definition": "A plant, principally of Medicago sativa, grown as a pasture crop.",
-      "sentence": "The word \"alfalfa\" is used in everyday language.",
+      "sentence": "Farmers planted alfalfa to feed their livestock.",
       "difficulty": "threeBee"
     },
     {
       "word": "officially",
       "definition": "In an official manner; according to official rules or regulations.",
-      "sentence": "The word \"officially\" is used in everyday language.",
+      "sentence": "The mayor officially opened the new library.",
       "difficulty": "threeBee"
     },
     {
       "word": "crematorium",
       "definition": "A place where the bodies of dead people are cremated",
-      "sentence": "The word \"crematorium\" is used in everyday language.",
+      "sentence": "The family held a service at the crematorium.",
       "difficulty": "threeBee"
     },
     {
       "word": "bayonet",
       "definition": "A pointed instrument of the dagger kind fitted on the muzzle of a musket or rifle, so as to give the soldier increased means of offence and defence. Originally, the bayonet was made with a handle, which needed to be fitted into the bore of the musket after the soldier had fired.",
-      "sentence": "The word \"bayonet\" is used in everyday language.",
+      "sentence": "Soldiers fixed bayonets to their rifles before battle.",
       "difficulty": "threeBee"
     },
     {
@@ -2081,7 +2081,7 @@ const wordsData = {
     {
       "word": "beautician",
       "definition": "One who does hair styling, manicures, and other beauty treatments.",
-      "sentence": "The word \"beautician\" is used in everyday language.",
+      "sentence": "The beautician styled hair for the wedding party.",
       "difficulty": "threeBee"
     },
     {
@@ -2099,19 +2099,19 @@ const wordsData = {
     {
       "word": "ultimatum",
       "definition": "A final statement of terms or conditions made by one party to another, especially one that expresses a threat of reprisal or war.",
-      "sentence": "The word \"ultimatum\" is used in everyday language.",
+      "sentence": "The boss gave him an ultimatum: improve or be fired.",
       "difficulty": "threeBee"
     },
     {
       "word": "whinnying",
       "definition": "(of a horse) To make a gentle neigh.",
-      "sentence": "The word \"whinnying\" is used in everyday language.",
+      "sentence": "The whinnying horses waited eagerly for their oats.",
       "difficulty": "threeBee"
     },
     {
       "word": "squalor",
       "definition": "Filthiness and degradation, as from neglect or poverty",
-      "sentence": "The word \"squalor\" is used in everyday language.",
+      "sentence": "The abandoned building had fallen into squalor.",
       "difficulty": "threeBee"
     },
     {
@@ -2129,13 +2129,13 @@ const wordsData = {
     {
       "word": "ominous",
       "definition": "Of or pertaining to an omen or to omens; being or exhibiting an omen; significant.",
-      "sentence": "The word \"ominous\" is used in everyday language.",
+      "sentence": "Dark, ominous clouds gathered on the horizon.",
       "difficulty": "threeBee"
     },
     {
       "word": "muffler",
       "definition": "Part of the exhaust pipe of a car that dampens the noise the engine produces.",
-      "sentence": "The word \"muffler\" is used in everyday language.",
+      "sentence": "The car's broken muffler made a loud rumbling noise.",
       "difficulty": "threeBee"
     },
     {
@@ -2147,85 +2147,85 @@ const wordsData = {
     {
       "word": "premises",
       "definition": "Land, and all the built structures on it, especially when considered as a single place.",
-      "sentence": "The word \"premises\" is used in everyday language.",
+      "sentence": "No smoking is allowed on the school premises.",
       "difficulty": "threeBee"
     },
     {
       "word": "safari",
       "definition": "A trip into any undeveloped area to see, photograph or hunt wild animals in their own environment.",
-      "sentence": "The word \"safari\" is used in everyday language.",
+      "sentence": "The family went on a safari to see wild elephants.",
       "difficulty": "threeBee"
     },
     {
       "word": "lasagna",
       "definition": "A flat sheet of pasta.",
-      "sentence": "The word \"lasagna\" is used in everyday language.",
+      "sentence": "My grandmother makes delicious homemade lasagna.",
       "difficulty": "threeBee"
     },
     {
       "word": "substantially",
       "definition": "In a strong substantial manner; considerably.",
-      "sentence": "The word \"substantially\" is used in everyday language.",
+      "sentence": "The new policy will substantially reduce costs.",
       "difficulty": "threeBee"
     },
     {
       "word": "mercantile",
       "definition": "Concerned with the exchange of goods for profit.",
-      "sentence": "The word \"mercantile\" is used in everyday language.",
+      "sentence": "The mercantile district was busy with shoppers.",
       "difficulty": "threeBee"
     },
     {
       "word": "formidable",
       "definition": "Causing fear, dread, awe, or discouragement as a result of size, strength, or some other impressive feature; commanding respect; causing wonder or astonishment.",
-      "sentence": "The word \"formidable\" is used in everyday language.",
+      "sentence": "The chess champion was a formidable opponent.",
       "difficulty": "threeBee"
     },
     {
       "word": "propaganda",
       "definition": "A concerted set of messages aimed at influencing the opinions or behavior of large numbers of people.",
-      "sentence": "The word \"propaganda\" is used in everyday language.",
+      "sentence": "The government used propaganda to influence public opinion.",
       "difficulty": "threeBee"
     },
     {
       "word": "marquee",
       "definition": "A large tent with open sides, used for outdoors entertainment.",
-      "sentence": "The word \"marquee\" is used in everyday language.",
+      "sentence": "Guests gathered under a large marquee for the outdoor wedding.",
       "difficulty": "threeBee"
     },
     {
       "word": "proficient",
       "definition": "An expert.",
-      "sentence": "The word \"proficient\" is used in everyday language.",
+      "sentence": "She became proficient in Spanish after living in Mexico.",
       "difficulty": "threeBee"
     },
     {
       "word": "compunction",
       "definition": "A pricking of conscience or a feeling of regret, especially one which is slight or fleeting.",
-      "sentence": "The word \"compunction\" is used in everyday language.",
+      "sentence": "He felt no compunction about taking the last cookie.",
       "difficulty": "threeBee"
     },
     {
       "word": "emphatically",
       "definition": "In an emphatic manner; with emphasis.",
-      "sentence": "The word \"emphatically\" is used in everyday language.",
+      "sentence": "The teacher emphatically denied the accusations.",
       "difficulty": "threeBee"
     },
     {
       "word": "hyperventilated",
       "definition": "To breathe quickly and deeply, especially at an abnormally rapid rate.",
-      "sentence": "The word \"hyperventilated\" is used in everyday language.",
+      "sentence": "The anxious patient hyperventilated and needed to breathe into a paper bag.",
       "difficulty": "threeBee"
     },
     {
       "word": "ostracism",
       "definition": "In ancient Athens (and some other cities), the temporary banishment by popular vote of a citizen considered dangerous to the state.",
-      "sentence": "The word \"ostracism\" is used in everyday language.",
+      "sentence": "The student faced ostracism after spreading rumors.",
       "difficulty": "threeBee"
     },
     {
       "word": "onslaught",
       "definition": "A fierce attack.",
-      "sentence": "The word \"onslaught\" is used in everyday language.",
+      "sentence": "The team defended against an onslaught of attacks.",
       "difficulty": "threeBee"
     },
     {
@@ -2237,43 +2237,43 @@ const wordsData = {
     {
       "word": "misanthrope",
       "definition": "One who hates all mankind; one who hates the human race.",
-      "sentence": "The word \"misanthrope\" is used in everyday language.",
+      "sentence": "The grumpy misanthrope avoided all social gatherings.",
       "difficulty": "threeBee"
     },
     {
       "word": "prototype",
       "definition": "An original form or object which is a basis for other forms or objects (particularly manufactured items), or for its generalizations and models.",
-      "sentence": "The word \"prototype\" is used in everyday language.",
+      "sentence": "Engineers tested the prototype before mass production.",
       "difficulty": "threeBee"
     },
     {
       "word": "cravenly",
       "definition": "[Definition not found for \"cravenly\"]",
-      "sentence": "Practice spelling: cravenly",
+      "sentence": "The coward cravenly fled from danger.",
       "difficulty": "threeBee"
     },
     {
       "word": "mulberry",
       "definition": "Any of several trees, of the genus Morus, having edible fruits.",
-      "sentence": "The word \"mulberry\" is used in everyday language.",
+      "sentence": "Birds feasted on ripe mulberries from the tree.",
       "difficulty": "threeBee"
     },
     {
       "word": "hypocritical",
       "definition": "Characterized by hypocrisy or being a hypocrite.",
-      "sentence": "The word \"hypocritical\" is used in everyday language.",
+      "sentence": "It was hypocritical of him to criticize others for lying.",
       "difficulty": "threeBee"
     },
     {
       "word": "chlorine",
       "definition": "A toxic, green, gaseous chemical element (symbol Cl) with an atomic number of 17.",
-      "sentence": "The word \"chlorine\" is used in everyday language.",
+      "sentence": "The pool water smelled strongly of chlorine.",
       "difficulty": "threeBee"
     },
     {
       "word": "traumatic",
       "definition": "Of, caused by, or causing trauma.",
-      "sentence": "The word \"traumatic\" is used in everyday language.",
+      "sentence": "The car accident was a traumatic experience for everyone involved.",
       "difficulty": "threeBee"
     },
     {
@@ -2285,19 +2285,19 @@ const wordsData = {
     {
       "word": "solemnly",
       "definition": "In a solemn manner.",
-      "sentence": "The word \"solemnly\" is used in everyday language.",
+      "sentence": "The judge solemnly pronounced the verdict.",
       "difficulty": "threeBee"
     },
     {
       "word": "begrudge",
       "definition": "To grudge about or over; be envious or covetous.",
-      "sentence": "The word \"begrudge\" is used in everyday language.",
+      "sentence": "I don't begrudge her success; she worked hard for it.",
       "difficulty": "threeBee"
     },
     {
       "word": "contentious",
       "definition": "Marked by heated arguments or controversy.",
-      "sentence": "The word \"contentious\" is used in everyday language.",
+      "sentence": "The contentious debate lasted for hours.",
       "difficulty": "threeBee"
     },
     {
@@ -2309,73 +2309,73 @@ const wordsData = {
     {
       "word": "ensemble",
       "definition": "A group of separate things that contribute to a coordinated whole.",
-      "sentence": "The word \"ensemble\" is used in everyday language.",
+      "sentence": "The jazz ensemble performed at the festival.",
       "difficulty": "threeBee"
     },
     {
       "word": "cadre",
       "definition": "A frame or framework.",
-      "sentence": "The word \"cadre\" is used in everyday language.",
+      "sentence": "A small cadre of experienced officers led the training.",
       "difficulty": "threeBee"
     },
     {
       "word": "lye",
       "definition": "An alkaline liquid made by leaching ashes (usually wood ashes).",
-      "sentence": "The word \"lye\" is used in everyday language.",
+      "sentence": "Soap makers use lye as a key ingredient.",
       "difficulty": "threeBee"
     },
     {
       "word": "belfry",
       "definition": "A movable tower used in sieges.",
-      "sentence": "The word \"belfry\" is used in everyday language.",
+      "sentence": "The church belfry housed three large bells.",
       "difficulty": "threeBee"
     },
     {
       "word": "lacrosse",
       "definition": "A sport played on a field between two opposing teams using sticks (crosses) and a ball, whereby one team defeats the other by achieving a higher score by scoring goals within the allotted time.",
-      "sentence": "The word \"lacrosse\" is used in everyday language.",
+      "sentence": "The school's lacrosse team won the championship.",
       "difficulty": "threeBee"
     },
     {
       "word": "sluice",
       "definition": "An artificial passage for water, fitted with a valve or gate, for example in a canal lock or a mill stream, for stopping or regulating the flow.",
-      "sentence": "The word \"sluice\" is used in everyday language.",
+      "sentence": "Miners used a sluice to separate gold from gravel.",
       "difficulty": "threeBee"
     },
     {
       "word": "cajolery",
       "definition": "Cajolement",
-      "sentence": "The word \"cajolery\" is used in everyday language.",
+      "sentence": "No amount of cajolery could change his mind.",
       "difficulty": "threeBee"
     },
     {
       "word": "vigilance",
       "definition": "Alert watchfulness.",
-      "sentence": "The word \"vigilance\" is used in everyday language.",
+      "sentence": "Constant vigilance is needed to prevent cyber attacks.",
       "difficulty": "threeBee"
     },
     {
       "word": "residuals",
       "definition": "A remainder left over at the end of some process.",
-      "sentence": "The word \"residuals\" is used in everyday language.",
+      "sentence": "Chemical residuals remained in the container.",
       "difficulty": "threeBee"
     },
     {
       "word": "boutique",
       "definition": "A small shop, especially one that sells fashionable clothes, jewelry and the like.",
-      "sentence": "The word \"boutique\" is used in everyday language.",
+      "sentence": "She opened a boutique selling handmade jewelry.",
       "difficulty": "threeBee"
     },
     {
       "word": "peroxide",
       "definition": "A divalent radical or anion containing two oxygen atoms linked by a covalent bond; any substance containing this group which yields hydrogen peroxide when treated with an acid",
-      "sentence": "The word \"peroxide\" is used in everyday language.",
+      "sentence": "Hydrogen peroxide is used to disinfect wounds.",
       "difficulty": "threeBee"
     },
     {
       "word": "aristocracy",
       "definition": "The nobility, or the hereditary ruling class.",
-      "sentence": "The word \"aristocracy\" is used in everyday language.",
+      "sentence": "The French Revolution overthrew the aristocracy.",
       "difficulty": "threeBee"
     },
     {
@@ -2387,25 +2387,25 @@ const wordsData = {
     {
       "word": "tuberculosis",
       "definition": "An infectious disease of humans and animals caused by a species of mycobacterium, usually Mycobacterium tuberculosis, mainly infecting the lungs where it causes tubercles characterized by the expectoration of mucus and sputum, fever, weight loss, and chest pain, and transmitted through inhalation or ingestion of bacteria.",
-      "sentence": "The word \"tuberculosis\" is used in everyday language.",
+      "sentence": "Tuberculosis was once a leading cause of death.",
       "difficulty": "threeBee"
     },
     {
       "word": "barricade",
       "definition": "A barrier constructed across a road, especially as a military defence",
-      "sentence": "The word \"barricade\" is used in everyday language.",
+      "sentence": "Protesters erected a barricade to block the street.",
       "difficulty": "threeBee"
     },
     {
       "word": "confreres",
       "definition": "A colleague or fellow, especially a professional one.",
-      "sentence": "The word \"confreres\" is used in everyday language.",
+      "sentence": "The doctor consulted with her medical confreres.",
       "difficulty": "threeBee"
     },
     {
       "word": "anonymously",
       "definition": "In an anonymous manner; without a name.",
-      "sentence": "The word \"anonymously\" is used in everyday language.",
+      "sentence": "The donor anonymously contributed one million dollars.",
       "difficulty": "threeBee"
     },
     {
@@ -2417,25 +2417,25 @@ const wordsData = {
     {
       "word": "barrette",
       "definition": "A clasp or clip for gathering and holding the hair.",
-      "sentence": "The word \"barrette\" is used in everyday language.",
+      "sentence": "She clipped her hair back with a sparkly barrette.",
       "difficulty": "threeBee"
     },
     {
       "word": "chassis",
       "definition": "A base frame, or movable railway, along which the carriage of a mounted gun moves backward and forward.",
-      "sentence": "The word \"chassis\" is used in everyday language.",
+      "sentence": "The car's chassis was damaged in the accident.",
       "difficulty": "threeBee"
     },
     {
       "word": "junket",
       "definition": "A basket.",
-      "sentence": "The word \"junket\" is used in everyday language.",
+      "sentence": "The politicians went on a junket to Europe.",
       "difficulty": "threeBee"
     },
     {
       "word": "quandary",
       "definition": "A state of not knowing what to decide; a state of difficulty or perplexity; a state of uncertainty, hesitation or puzzlement.",
-      "sentence": "The word \"quandary\" is used in everyday language.",
+      "sentence": "I'm in a quandary about which college to attend.",
       "difficulty": "threeBee"
     },
     {
@@ -2447,7 +2447,7 @@ const wordsData = {
     {
       "word": "gingham",
       "definition": "A cotton fabric made from dyed and white yarn woven in checks",
-      "sentence": "The word \"gingham\" is used in everyday language.",
+      "sentence": "The picnic tablecloth had a red and white gingham pattern.",
       "difficulty": "threeBee"
     },
     {
@@ -2459,7 +2459,7 @@ const wordsData = {
     {
       "word": "auxiliary",
       "definition": "A person or group that acts in an auxiliary manner.",
-      "sentence": "The word \"auxiliary\" is used in everyday language.",
+      "sentence": "Auxiliary power kicked in when the main generator failed.",
       "difficulty": "threeBee"
     },
     {
@@ -2471,13 +2471,13 @@ const wordsData = {
     {
       "word": "patriarchs",
       "definition": "The highest form of bishop, in the ancient world having authority over other bishops in the province but now generally as an honorary title; in Roman Catholicism, considered a bishop second only to the Pope in rank.",
-      "sentence": "The word \"patriarchs\" is used in everyday language.",
+      "sentence": "The ancient patriarchs led their extended families.",
       "difficulty": "threeBee"
     },
     {
       "word": "chandelier",
       "definition": "A branched, often ornate, lighting fixture suspended from the ceiling",
-      "sentence": "The word \"chandelier\" is used in everyday language.",
+      "sentence": "A crystal chandelier hung from the ballroom ceiling.",
       "difficulty": "threeBee"
     },
     {
@@ -2489,43 +2489,43 @@ const wordsData = {
     {
       "word": "concierge",
       "definition": "One who attends to the wishes of hotel guests.",
-      "sentence": "The word \"concierge\" is used in everyday language.",
+      "sentence": "The hotel concierge recommended excellent restaurants.",
       "difficulty": "threeBee"
     },
     {
       "word": "latticework",
       "definition": "A lattice or lattice-like structure; interlacing laths or strips.",
-      "sentence": "The word \"latticework\" is used in everyday language.",
+      "sentence": "Roses climbed the wooden latticework fence.",
       "difficulty": "threeBee"
     },
     {
       "word": "hibiscus",
       "definition": "A flower of the genus Hibiscus, especially Hibiscus syriacus, found in tropical to temperate regions, of some species used for making infusions/tea.",
-      "sentence": "The word \"hibiscus\" is used in everyday language.",
+      "sentence": "Bright red hibiscus flowers bloomed in the garden.",
       "difficulty": "threeBee"
     },
     {
       "word": "tamale",
       "definition": "Mexican dish of cornmeal dough shell filled with various ingredients (e.g. chopped beef, pork, sweet filling) then steamed in corn husks.",
-      "sentence": "The word \"tamale\" is used in everyday language.",
+      "sentence": "We enjoyed spicy chicken tamales for dinner.",
       "difficulty": "threeBee"
     },
     {
       "word": "maracas",
       "definition": "A Latin American percussion instrument consisting of a hollow-gourd rattle containing pebbles or beans and often played in pairs, as a rhythm instrument.",
-      "sentence": "The word \"maracas\" is used in everyday language.",
+      "sentence": "The musicians shook maracas to the Latin beat.",
       "difficulty": "threeBee"
     },
     {
       "word": "gyroplane",
       "definition": "Any aircraft that obtains lift from both rotating blades and small wings.",
-      "sentence": "The word \"gyroplane\" is used in everyday language.",
+      "sentence": "The experimental gyroplane hovered above the field.",
       "difficulty": "threeBee"
     },
     {
       "word": "burpees",
       "definition": "A physical exercise performed by bending over, performing a squat thrust, returning to a standing position, and jumping once.",
-      "sentence": "The word \"burpees\" is used in everyday language.",
+      "sentence": "The trainer made us do fifty burpees during class.",
       "difficulty": "threeBee"
     },
     {
@@ -2537,7 +2537,7 @@ const wordsData = {
     {
       "word": "piccolo",
       "definition": "An instrument similar to a flute, but smaller, and playing an octave higher.",
-      "sentence": "The word \"piccolo\" is used in everyday language.",
+      "sentence": "The piccolo player hit the highest notes in the orchestra.",
       "difficulty": "threeBee"
     },
     {
@@ -2549,7 +2549,7 @@ const wordsData = {
     {
       "word": "tulle",
       "definition": "A kind of silk lace or light netting, used for clothing, veils, etc.",
-      "sentence": "The word \"tulle\" is used in everyday language.",
+      "sentence": "Her wedding veil was made of delicate white tulle.",
       "difficulty": "threeBee"
     },
     {
@@ -2561,7 +2561,7 @@ const wordsData = {
     {
       "word": "camphor",
       "definition": "A white transparent waxy crystalline isoprenoid ketone, 1,7,7-trimethylbicyclo[2.2.1]heptan-2-one, with a strong pungent odour, used in pharmacy.",
-      "sentence": "The word \"camphor\" is used in everyday language.",
+      "sentence": "The medicine cabinet smelled of camphor and eucalyptus.",
       "difficulty": "threeBee"
     },
     {
@@ -2573,25 +2573,25 @@ const wordsData = {
     {
       "word": "paparazzi",
       "definition": "A paparazzo.",
-      "sentence": "The word \"paparazzi\" is used in everyday language.",
+      "sentence": "Paparazzi photographers chased the celebrity's car.",
       "difficulty": "threeBee"
     },
     {
       "word": "pumpernickel",
       "definition": "A German sourdough bread made from rye.",
-      "sentence": "The word \"pumpernickel\" is used in everyday language.",
+      "sentence": "I ordered a sandwich on dark pumpernickel bread.",
       "difficulty": "threeBee"
     },
     {
       "word": "pogrom",
       "definition": "A riot aimed at persecution or massacre of a particular ethnic or religious group, usually Jews.",
-      "sentence": "The word \"pogrom\" is used in everyday language.",
+      "sentence": "The historical pogrom forced thousands to flee their homes.",
       "difficulty": "threeBee"
     },
     {
       "word": "bursitis",
       "definition": "An inflammation of a bursa, most common in the shoulder, elbow or knee",
-      "sentence": "The word \"bursitis\" is used in everyday language.",
+      "sentence": "The pitcher developed bursitis in his throwing shoulder.",
       "difficulty": "threeBee"
     },
     {
@@ -2603,13 +2603,13 @@ const wordsData = {
     {
       "word": "cycads",
       "definition": "Any plant of the division Cycadophyta, having a stout and woody trunk with a crown of large, hard and stiff, evergreen leaves.",
-      "sentence": "The word \"cycads\" is used in everyday language.",
+      "sentence": "Ancient cycads have survived since the time of dinosaurs.",
       "difficulty": "threeBee"
     },
     {
       "word": "sarsaparilla",
       "definition": "Any of various tropical (Central and South) American vines of the genus Smilax, such as Smilax regelii, which have fragrant roots.",
-      "sentence": "The word \"sarsaparilla\" is used in everyday language.",
+      "sentence": "The old-fashioned soda fountain served sarsaparilla drinks.",
       "difficulty": "threeBee"
     },
     {
@@ -2621,7 +2621,7 @@ const wordsData = {
     {
       "word": "cannelloni",
       "definition": "Wide tubes of pasta filled with a savoury stuffing and baked in the oven.",
-      "sentence": "The word \"cannelloni\" is used in everyday language.",
+      "sentence": "The restaurant's specialty was ricotta-stuffed cannelloni.",
       "difficulty": "threeBee"
     },
     {
@@ -2633,7 +2633,7 @@ const wordsData = {
     {
       "word": "bronchitis",
       "definition": "An inflammation of the bronchi of the lungs, that causes the cilia of the bronchial epithelial cells to stop functioning.",
-      "sentence": "The word \"bronchitis\" is used in everyday language.",
+      "sentence": "He stayed home from work with acute bronchitis.",
       "difficulty": "threeBee"
     },
     {
@@ -2645,19 +2645,19 @@ const wordsData = {
     {
       "word": "diphtheria",
       "definition": "A serious infectious disease which causes inflammation of mucous membranes of the upper respiratory tract caused by Corynebacterium diphtheriae.",
-      "sentence": "The word \"diphtheria\" is used in everyday language.",
+      "sentence": "The vaccine has nearly eliminated diphtheria in developed countries.",
       "difficulty": "threeBee"
     },
     {
       "word": "baklava",
       "definition": "A popular sweet pastry found in many cuisines of the Middle East and the Balkans, made of chopped nuts layered with phyllo pastry.",
-      "sentence": "The word \"baklava\" is used in everyday language.",
+      "sentence": "The sweet baklava was layered with honey and pistachios.",
       "difficulty": "threeBee"
     },
     {
       "word": "corbels",
       "definition": "A structural member jutting out of a wall to carry a superincumbent weight.",
-      "sentence": "The word \"corbels\" is used in everyday language.",
+      "sentence": "Stone corbels supported the weight of the cathedral's arches.",
       "difficulty": "threeBee"
     },
     {
@@ -2693,7 +2693,7 @@ const wordsData = {
     {
       "word": "maquisards",
       "definition": "A member of a resistance or guerrilla movement, originally and chiefly that of the French during the German occupation of 1940-5.",
-      "sentence": "The word \"maquisards\" is used in everyday language.",
+      "sentence": "The French maquisards resisted Nazi occupation during World War II.",
       "difficulty": "threeBee"
     },
     {
