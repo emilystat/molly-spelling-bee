@@ -393,6 +393,12 @@ function startStudyMode() {
   currentMode = "study";
   studyPhase = "dashboard";
 
+  // Study mode requires a specific difficulty, not "all"
+  if (currentDifficulty === "all") {
+    currentDifficulty = "oneBee";
+    difficultySelect.value = "oneBee";
+  }
+
   // Hide practice/quiz UI
   document.querySelector(".word-controls").style.display = "none";
   document.querySelector(".input-row").style.display = "none";
@@ -409,13 +415,26 @@ function startStudyGroup(groupIndex) {
   studyCurrentWordIndex = 0;
   studyTestResults = [];
 
-  // Get the 10 words for this group
+  // Ensure we have a valid difficulty (not "all")
+  if (currentDifficulty === "all") {
+    currentDifficulty = "oneBee";
+    difficultySelect.value = "oneBee";
+  }
+
+  // Get the 10 words for this group from the CURRENT difficulty
   studyWords = getStudyGroupWords(currentDifficulty, groupIndex);
 
   if (studyWords.length === 0) {
     alert("No words available for this group.");
     return;
   }
+
+  console.log("Study Group Started:", {
+    difficulty: currentDifficulty,
+    groupIndex: groupIndex,
+    wordsInGroup: studyWords.length,
+    words: studyWords.map(w => w.word)
+  });
 
   // Show study phase UI
   showStudyPhaseUI();
@@ -515,12 +534,25 @@ function prevStudyWord() {
 function startStudyTest() {
   studyPhase = "testing";
 
-  // Shuffle the study words for testing
-  quizWords = shuffleArray(studyWords);
+  // Make sure we have study words
+  if (!studyWords || studyWords.length === 0) {
+    alert("No study words available. Please study a group first.");
+    return;
+  }
+
+  // Create a shuffled copy of ONLY the study words for testing
+  quizWords = shuffleArray(studyWords.slice()); // .slice() creates a copy
   quizIndex = 0;
   correctCount = 0;
   totalAttempts = 0;
   studyTestResults = [];
+
+  console.log("Study Test Starting:", {
+    studyWordsCount: studyWords.length,
+    quizWordsCount: quizWords.length,
+    studyWords: studyWords.map(w => w.word),
+    quizWords: quizWords.map(w => w.word)
+  });
 
   // Show test UI
   showTestPhaseUI();
