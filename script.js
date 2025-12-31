@@ -775,10 +775,12 @@ checkBtn.addEventListener("click", () => {
 });
 
 nextWordBtn.addEventListener("click", () => {
-  if (currentMode === "quiz") {
+  // In quiz mode OR study test mode, continue with quiz words
+  if (currentMode === "quiz" || studyPhase === "testing") {
     quizIndex += 1;
     loadQuizWord();
   } else {
+    // In practice mode, pick a random word
     const wordObj = pickRandomWord();
     if (!wordObj) return;
     setCurrentWord(wordObj);
