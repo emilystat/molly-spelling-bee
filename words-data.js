@@ -7,19 +7,19 @@ const wordsData = {
     {
       "word": "tag",
       "definition": "A small label.",
-      "sentence": "The word \"tag\" is used in everyday language.",
+      "sentence": "The price tag showed the toy cost five dollars.",
       "difficulty": "oneBee"
     },
     {
       "word": "send",
       "definition": "The rising motion of water as a wave passes; a surge; the upward angular displacement of a vessel, opposed to pitch, the correlative downward movement.",
-      "sentence": "The word \"send\" is used in everyday language.",
+      "sentence": "Please send me a postcard when you get there.",
       "difficulty": "oneBee"
     },
     {
       "word": "deck",
       "definition": "Any raised flat surface that can be walked on: a balcony; a porch; a raised patio; a flat rooftop.",
-      "sentence": "The word \"deck\" is used in everyday language.",
+      "sentence": "We sat on the back deck enjoying the sunshine.",
       "difficulty": "oneBee"
     },
     {
@@ -31,7 +31,7 @@ const wordsData = {
     {
       "word": "snug",
       "definition": "A small, comfortable back room in a pub.",
-      "sentence": "The word \"snug\" is used in everyday language.",
+      "sentence": "The kitten was snug in its warm blanket.",
       "difficulty": "oneBee"
     },
     {
@@ -61,7 +61,7 @@ const wordsData = {
     {
       "word": "scrub",
       "definition": "One who labors hard and lives meanly; a mean fellow.",
-      "sentence": "The word \"scrub\" is used in everyday language.",
+      "sentence": "Don't forget to scrub behind your ears in the bath.",
       "difficulty": "oneBee"
     },
     {
@@ -79,37 +79,37 @@ const wordsData = {
     {
       "word": "cozy",
       "definition": "A padded or knit covering put on an item to keep it warm, especially a teapot or egg.",
-      "sentence": "The word \"cozy\" is used in everyday language.",
+      "sentence": "The cabin felt cozy with a fire in the fireplace.",
       "difficulty": "oneBee"
     },
     {
       "word": "tint",
       "definition": "A slight coloring.",
-      "sentence": "The word \"tint\" is used in everyday language.",
+      "sentence": "The windows had a dark tint to block the sun.",
       "difficulty": "oneBee"
     },
     {
       "word": "milk",
       "definition": "A white liquid produced by the mammary glands of female mammals to nourish their young. From certain animals, especially cows, it is also called dairy milk and is a common food for humans as a beverage or used to produce various dairy products such as butter, cheese, and yogurt.",
-      "sentence": "The word \"milk\" is used in everyday language.",
+      "sentence": "I poured cold milk over my cereal.",
       "difficulty": "oneBee"
     },
     {
       "word": "yawn",
       "definition": "The action of yawning; opening the mouth widely and taking a long, rather deep breath, often because one is tired or bored.",
-      "sentence": "The word \"yawn\" is used in everyday language.",
+      "sentence": "The tired student tried not to yawn during class.",
       "difficulty": "oneBee"
     },
     {
       "word": "tank",
       "definition": "A closed container for liquids or gases.",
-      "sentence": "The word \"tank\" is used in everyday language.",
+      "sentence": "The fish swam happily in their clean tank.",
       "difficulty": "oneBee"
     },
     {
       "word": "want",
       "definition": "A desire, wish, longing.",
-      "sentence": "The word \"want\" is used in everyday language.",
+      "sentence": "I want to learn how to ride a bicycle.",
       "difficulty": "oneBee"
     },
     {
@@ -121,19 +121,19 @@ const wordsData = {
     {
       "word": "pond",
       "definition": "An inland body of standing water, either natural or man-made, that is smaller than a lake.",
-      "sentence": "The word \"pond\" is used in everyday language.",
+      "sentence": "Ducks paddled across the calm pond.",
       "difficulty": "oneBee"
     },
     {
       "word": "skirt",
       "definition": "An article of clothing, usually worn by women and girls, that hangs from the waist and covers the lower part of the body.",
-      "sentence": "The word \"skirt\" is used in everyday language.",
+      "sentence": "She wore a plaid skirt to school.",
       "difficulty": "oneBee"
     },
     {
       "word": "sharks",
       "definition": "A scaleless, predatory fish of the superorder Selachimorpha, with a cartilaginous skeleton and 5 to 7 gill slits on each side of its head.",
-      "sentence": "The word \"sharks\" is used in everyday language.",
+      "sentence": "Great white sharks are powerful ocean predators.",
       "difficulty": "oneBee"
     },
     {
@@ -151,7 +151,7 @@ const wordsData = {
     {
       "word": "taffy",
       "definition": "A soft, chewy candy made from boiled molasses or brown sugar.",
-      "sentence": "The word \"taffy\" is used in everyday language.",
+      "sentence": "The saltwater taffy was sticky and sweet.",
       "difficulty": "oneBee"
     },
     {
@@ -175,19 +175,19 @@ const wordsData = {
     {
       "word": "candy",
       "definition": "Edible, sweet-tasting confectionery containing sugar, or sometimes artificial sweeteners, and often flavored with fruit, chocolate, nuts, herbs and spices, or artificial flavors.",
-      "sentence": "The word \"candy\" is used in everyday language.",
+      "sentence": "We got candy while trick-or-treating on Halloween.",
       "difficulty": "oneBee"
     },
     {
       "word": "scrunch",
       "definition": "To grind with the teeth, and with a crackling sound; to craunch.",
-      "sentence": "The word \"scrunch\" is used in everyday language.",
+      "sentence": "She had to scrunch down to fit under the low branch.",
       "difficulty": "oneBee"
     },
     {
       "word": "ruby",
       "definition": "A clear, deep, red variety of corundum, valued as a precious stone.",
-      "sentence": "The word \"ruby\" is used in everyday language.",
+      "sentence": "The queen's crown had a large ruby in the center.",
       "difficulty": "oneBee"
     },
     {
@@ -199,25 +199,25 @@ const wordsData = {
     {
       "word": "tackle",
       "definition": "A device for grasping an object and an attached means of moving it, as a rope and hook.",
-      "sentence": "The word \"tackle\" is used in everyday language.",
+      "sentence": "The football player made a great tackle.",
       "difficulty": "oneBee"
     },
     {
       "word": "wire",
       "definition": "Metal formed into a thin, even thread, now usually by being drawn through a hole in a steel die.",
-      "sentence": "The word \"wire\" is used in everyday language.",
+      "sentence": "Be careful not to trip over that wire.",
       "difficulty": "oneBee"
     },
     {
       "word": "skater",
       "definition": "A person who skates.",
-      "sentence": "The word \"skater\" is used in everyday language.",
+      "sentence": "The figure skater performed a perfect spin.",
       "difficulty": "oneBee"
     },
     {
       "word": "giant",
       "definition": "A mythical human of very great size.",
-      "sentence": "The word \"giant\" is used in everyday language.",
+      "sentence": "The giant sequoia tree was taller than a building.",
       "difficulty": "oneBee"
     },
     {
@@ -241,31 +241,31 @@ const wordsData = {
     {
       "word": "tender",
       "definition": "Care, kind concern, regard.",
-      "sentence": "The word \"tender\" is used in everyday language.",
+      "sentence": "The meat was so tender it fell off the bone.",
       "difficulty": "oneBee"
     },
     {
       "word": "paste",
       "definition": "A soft moist mixture, in particular:",
-      "sentence": "The word \"paste\" is used in everyday language.",
+      "sentence": "Use paste to glue the pictures in your scrapbook.",
       "difficulty": "oneBee"
     },
     {
       "word": "melon",
       "definition": "Any of various plants of the family Cucurbitaceae grown for food, generally not including the cucumber.",
-      "sentence": "The word \"melon\" is used in everyday language.",
+      "sentence": "We ate fresh watermelon on the hot summer day.",
       "difficulty": "oneBee"
     },
     {
       "word": "farmer",
       "definition": "A person who works the land and/or who keeps livestock, especially on a farm.",
-      "sentence": "The word \"farmer\" is used in everyday language.",
+      "sentence": "The farmer planted corn in the spring.",
       "difficulty": "oneBee"
     },
     {
       "word": "parent",
       "definition": "One of the two persons from whom one is immediately biologically descended; a mother or father.",
-      "sentence": "The word \"parent\" is used in everyday language.",
+      "sentence": "Each parent received a report card for their child.",
       "difficulty": "oneBee"
     },
     {
@@ -277,13 +277,13 @@ const wordsData = {
     {
       "word": "hockey",
       "definition": "Ice hockey, a game on ice in which two teams of six players skate and try to score by shooting a puck into the opposing team's net, using their sticks.",
-      "sentence": "The word \"hockey\" is used in everyday language.",
+      "sentence": "The hockey team practiced on the ice rink.",
       "difficulty": "oneBee"
     },
     {
       "word": "slime",
       "definition": "Soft, moist earth or clay, having an adhesive quality; viscous mud; any substance of a dirty nature, that is moist, soft, and adhesive; bitumen; mud containing metallic ore, obtained in the preparatory dressing.",
-      "sentence": "The word \"slime\" is used in everyday language.",
+      "sentence": "The green slime oozed between her fingers.",
       "difficulty": "oneBee"
     },
     {
@@ -301,19 +301,19 @@ const wordsData = {
     {
       "word": "shortcut",
       "definition": "A path between two points that is faster than the commonly used paths.",
-      "sentence": "The word \"shortcut\" is used in everyday language.",
+      "sentence": "Taking a shortcut through the park saved us time.",
       "difficulty": "oneBee"
     },
     {
       "word": "bait",
       "definition": "Any substance, especially food, used in catching fish, or other animals, by alluring them to a hook, snare, trap, or net.",
-      "sentence": "The word \"bait\" is used in everyday language.",
+      "sentence": "We used worms as bait to catch fish.",
       "difficulty": "oneBee"
     },
     {
       "word": "lure",
       "definition": "Something that tempts or attracts, especially one with a promise of reward or pleasure",
-      "sentence": "The word \"lure\" is used in everyday language.",
+      "sentence": "The colorful lure attracted the big bass.",
       "difficulty": "oneBee"
     },
     {
@@ -325,7 +325,7 @@ const wordsData = {
     {
       "word": "forest",
       "definition": "A dense uncultivated tract of trees and undergrowth, larger than woods.",
-      "sentence": "The word \"forest\" is used in everyday language.",
+      "sentence": "We hiked through the forest and saw many trees.",
       "difficulty": "oneBee"
     },
     {
@@ -343,19 +343,19 @@ const wordsData = {
     {
       "word": "baffling",
       "definition": "To publicly disgrace, especially of a recreant knight.",
-      "sentence": "The word \"baffling\" is used in everyday language.",
+      "sentence": "The mystery was baffling and hard to solve.",
       "difficulty": "oneBee"
     },
     {
       "word": "sizzling",
       "definition": "To make the sound of water hitting a hot surface.",
-      "sentence": "The word \"sizzling\" is used in everyday language.",
+      "sentence": "Bacon was sizzling in the hot pan.",
       "difficulty": "oneBee"
     },
     {
       "word": "hoist",
       "definition": "A hoisting device, such as pulley or crane.",
-      "sentence": "The word \"hoist\" is used in everyday language.",
+      "sentence": "The sailors used a rope to hoist the sail.",
       "difficulty": "oneBee"
     },
     {
@@ -367,31 +367,31 @@ const wordsData = {
     {
       "word": "remind",
       "definition": "To cause one to experience a memory (of someone or something); to bring to the notice or consideration (of a person).",
-      "sentence": "The word \"remind\" is used in everyday language.",
+      "sentence": "Please remind me to bring my lunch tomorrow.",
       "difficulty": "oneBee"
     },
     {
       "word": "mango",
       "definition": "A tropical Asian fruit tree, Mangifera indica.",
-      "sentence": "The word \"mango\" is used in everyday language.",
+      "sentence": "The ripe mango was juicy and delicious.",
       "difficulty": "oneBee"
     },
     {
       "word": "coral",
       "definition": "A hard substance made of the limestone skeletons of marine polyps.",
-      "sentence": "The word \"coral\" is used in everyday language.",
+      "sentence": "Bright coral reefs provide homes for tropical fish.",
       "difficulty": "oneBee"
     },
     {
       "word": "jangle",
       "definition": "A rattling metallic sound.",
-      "sentence": "The word \"jangle\" is used in everyday language.",
+      "sentence": "The keys jangle in my pocket when I walk.",
       "difficulty": "oneBee"
     },
     {
       "word": "shimmer",
       "definition": "A faint or veiled and tremulous gleam or shining.",
-      "sentence": "The word \"shimmer\" is used in everyday language.",
+      "sentence": "The lake began to shimmer in the moonlight.",
       "difficulty": "oneBee"
     },
     {
@@ -421,7 +421,7 @@ const wordsData = {
     {
       "word": "distress",
       "definition": "(Cause of) discomfort.",
-      "sentence": "The word \"distress\" is used in everyday language.",
+      "sentence": "The lost puppy was in distress and whimpering.",
       "difficulty": "oneBee"
     },
     {
@@ -439,25 +439,25 @@ const wordsData = {
     {
       "word": "ajar",
       "definition": "To turn or open slightly; to become ajar or to cause to become ajar; to be or to hang ajar.",
-      "sentence": "The word \"ajar\" is used in everyday language.",
+      "sentence": "The door was left slightly ajar.",
       "difficulty": "oneBee"
     },
     {
       "word": "basil",
       "definition": "A plant (Ocimum basilicum).",
-      "sentence": "The word \"basil\" is used in everyday language.",
+      "sentence": "Fresh basil makes the tomato sauce taste better.",
       "difficulty": "oneBee"
     },
     {
       "word": "triple",
       "definition": "Three times or thrice the number, amount, size, etc",
-      "sentence": "The word \"triple\" is used in everyday language.",
+      "sentence": "She ordered a triple scoop ice cream cone.",
       "difficulty": "oneBee"
     },
     {
       "word": "satin",
       "definition": "A cloth woven from silk, nylon or polyester with a glossy surface and a dull back. (The same weaving technique applied to cotton produces cloth termed sateen).",
-      "sentence": "The word \"satin\" is used in everyday language.",
+      "sentence": "The bride's dress was made of smooth white satin.",
       "difficulty": "oneBee"
     },
     {
@@ -469,7 +469,7 @@ const wordsData = {
     {
       "word": "signal",
       "definition": "A sequence of states representing an encoded message in a communication channel.",
-      "sentence": "The word \"signal\" is used in everyday language.",
+      "sentence": "The traffic signal turned green and we drove forward.",
       "difficulty": "oneBee"
     },
     {
@@ -493,13 +493,13 @@ const wordsData = {
     {
       "word": "minnows",
       "definition": "A small freshwater fish of the carp family, Phoxinus phoxinus.",
-      "sentence": "The word \"minnows\" is used in everyday language.",
+      "sentence": "Tiny minnows darted through the shallow water.",
       "difficulty": "oneBee"
     },
     {
       "word": "silver",
       "definition": "A lustrous, white, metallic element, atomic number 47, atomic weight 107.87, symbol Ag.",
-      "sentence": "The word \"silver\" is used in everyday language.",
+      "sentence": "The silver bracelet sparkled on her wrist.",
       "difficulty": "oneBee"
     },
     {
@@ -517,43 +517,43 @@ const wordsData = {
     {
       "word": "writing",
       "definition": "Graphism of symbols such as letters that express some meaning.",
-      "sentence": "The word \"writing\" is used in everyday language.",
+      "sentence": "His writing was so neat it looked like printing.",
       "difficulty": "oneBee"
     },
     {
       "word": "kitchen",
       "definition": "A room or area for preparing food.",
-      "sentence": "The word \"kitchen\" is used in everyday language.",
+      "sentence": "Mom is cooking dinner in the kitchen.",
       "difficulty": "oneBee"
     },
     {
       "word": "sugar",
       "definition": "Sucrose in the form of small crystals, obtained from sugar cane or sugar beet and used to sweeten food and drink.",
-      "sentence": "The word \"sugar\" is used in everyday language.",
+      "sentence": "Add two cups of sugar to the cookie dough.",
       "difficulty": "oneBee"
     },
     {
       "word": "awkward",
       "definition": "Someone or something that is awkward.",
-      "sentence": "The word \"awkward\" is used in everyday language.",
+      "sentence": "It was awkward when I forgot her name.",
       "difficulty": "oneBee"
     },
     {
       "word": "seep",
       "definition": "A small spring, pool, or other spot where liquid from the ground (e.g. water, petroleum or tar) has oozed to the surface; a place of seeping.",
-      "sentence": "The word \"seep\" is used in everyday language.",
+      "sentence": "Water began to seep through the crack in the wall.",
       "difficulty": "oneBee"
     },
     {
       "word": "sweet",
       "definition": "The basic taste sensation induced by sugar.",
-      "sentence": "The word \"sweet\" is used in everyday language.",
+      "sentence": "The strawberries were perfectly ripe and sweet.",
       "difficulty": "oneBee"
     },
     {
       "word": "wheels",
       "definition": "A circular device capable of rotating on its axis, facilitating movement or transportation or performing labour in machines.",
-      "sentence": "The word \"wheels\" is used in everyday language.",
+      "sentence": "The bicycle wheels spun faster as we rode downhill.",
       "difficulty": "oneBee"
     },
     {
@@ -565,19 +565,19 @@ const wordsData = {
     {
       "word": "fruit",
       "definition": "(often in the plural) In general, a product of plant growth useful to man or animals.",
-      "sentence": "The word \"fruit\" is used in everyday language.",
+      "sentence": "We packed apples and oranges for healthy fruit snacks.",
       "difficulty": "oneBee"
     },
     {
       "word": "roam",
       "definition": "To wander or travel freely and with no specific destination.",
-      "sentence": "The word \"roam\" is used in everyday language.",
+      "sentence": "The cattle roam freely across the ranch.",
       "difficulty": "oneBee"
     },
     {
       "word": "goats",
       "definition": "A mammal, Capra aegagrus hircus, and similar species of the genus Capra.",
-      "sentence": "The word \"goats\" is used in everyday language.",
+      "sentence": "The goats climbed up the rocky hillside.",
       "difficulty": "oneBee"
     },
     {
@@ -589,13 +589,13 @@ const wordsData = {
     {
       "word": "limbs",
       "definition": "A major appendage of human or animal, used for locomotion (such as an arm, leg or wing).",
-      "sentence": "The word \"limbs\" is used in everyday language.",
+      "sentence": "The tree's large limbs provided shade on hot days.",
       "difficulty": "oneBee"
     },
     {
       "word": "ahead",
       "definition": "In or to the front; in advance; onward.",
-      "sentence": "The word \"ahead\" is used in everyday language.",
+      "sentence": "Look ahead to see what's coming down the road.",
       "difficulty": "oneBee"
     },
     {
@@ -607,7 +607,7 @@ const wordsData = {
     {
       "word": "unicorn",
       "definition": "A mythical beast resembling a horse or deer with a single, straight, spiraled horn projecting from its forehead.",
-      "sentence": "The word \"unicorn\" is used in everyday language.",
+      "sentence": "The storybook featured a magical white unicorn.",
       "difficulty": "oneBee"
     },
     {
@@ -661,7 +661,7 @@ const wordsData = {
     {
       "word": "acrobat",
       "definition": "An athlete who performs acts requiring skill, agility and coordination.",
-      "sentence": "The word \"acrobat\" is used in everyday language.",
+      "sentence": "The acrobat flipped through the air with ease.",
       "difficulty": "oneBee"
     },
     {
@@ -679,25 +679,25 @@ const wordsData = {
     {
       "word": "forepaw",
       "definition": "Either of the paws of an animal's foreleg, homologous to the hand in humans.",
-      "sentence": "The word \"forepaw\" is used in everyday language.",
+      "sentence": "The cat licked its injured forepaw gently.",
       "difficulty": "oneBee"
     },
     {
       "word": "elephant",
       "definition": "A mammal of the order Proboscidea, having a trunk, and two large ivory tusks jutting from the upper jaw.",
-      "sentence": "The word \"elephant\" is used in everyday language.",
+      "sentence": "The elephant used its trunk to spray water.",
       "difficulty": "oneBee"
     },
     {
       "word": "hedgehog",
       "definition": "A small mammal, of the family Erinaceidae or subfamily Erinaceinae (spiny hedgehog, the latter characterized by their spiny back and often by the habit of rolling up into a ball when attacked.)",
-      "sentence": "The word \"hedgehog\" is used in everyday language.",
+      "sentence": "The hedgehog curled into a prickly ball.",
       "difficulty": "oneBee"
     },
     {
       "word": "recipe",
       "definition": "A formula for preparing or using a medicine; a prescription; also, a medicine prepared from such instructions.",
-      "sentence": "The word \"recipe\" is used in everyday language.",
+      "sentence": "Grandma shared her secret cookie recipe with me.",
       "difficulty": "oneBee"
     },
     {
@@ -715,55 +715,55 @@ const wordsData = {
     {
       "word": "mermaid",
       "definition": "A mythological creature with a woman's head and upper body, and a tail of a fish.",
-      "sentence": "The word \"mermaid\" is used in everyday language.",
+      "sentence": "The little girl dressed as a mermaid for Halloween.",
       "difficulty": "oneBee"
     },
     {
       "word": "bombarded",
       "definition": "To continuously attack something with bombs, artillery shells or other missiles or projectiles.",
-      "sentence": "The word \"bombarded\" is used in everyday language.",
+      "sentence": "We were bombarded with questions after the presentation.",
       "difficulty": "oneBee"
     },
     {
       "word": "disability",
       "definition": "State of being disabled; deprivation or want of ability; absence of competent physical, intellectual, or moral power, means, fitness, and the like.",
-      "sentence": "The word \"disability\" is used in everyday language.",
+      "sentence": "Her disability did not stop her from playing sports.",
       "difficulty": "oneBee"
     },
     {
       "word": "incredible",
       "definition": "Too implausible to be credible; beyond belief; unbelievable.",
-      "sentence": "The word \"incredible\" is used in everyday language.",
+      "sentence": "The sunset over the ocean was absolutely incredible.",
       "difficulty": "oneBee"
     },
     {
       "word": "leather",
       "definition": "A tough material produced from the skin of animals, by tanning or similar process, used e.g. for clothing.",
-      "sentence": "The word \"leather\" is used in everyday language.",
+      "sentence": "His baseball glove was made of soft brown leather.",
       "difficulty": "oneBee"
     },
     {
       "word": "countess",
       "definition": "The wife of a count or earl.",
-      "sentence": "The word \"countess\" is used in everyday language.",
+      "sentence": "The wealthy countess lived in a grand mansion.",
       "difficulty": "oneBee"
     },
     {
       "word": "nervous",
       "definition": "Of sinews and tendons.",
-      "sentence": "The word \"nervous\" is used in everyday language.",
+      "sentence": "I felt nervous before giving my speech.",
       "difficulty": "oneBee"
     },
     {
       "word": "peppercorn",
       "definition": "The seeds of the plant Piper nigrum. Commonly used as a spice, usually but not always ground or crushed.",
-      "sentence": "The word \"peppercorn\" is used in everyday language.",
+      "sentence": "A single peppercorn fell into the soup pot.",
       "difficulty": "oneBee"
     },
     {
       "word": "cartwheel",
       "definition": "The literal wheel of a cart.",
-      "sentence": "The word \"cartwheel\" is used in everyday language.",
+      "sentence": "She did a perfect cartwheel across the grass.",
       "difficulty": "oneBee"
     },
     {
@@ -775,13 +775,13 @@ const wordsData = {
     {
       "word": "weather",
       "definition": "The short term state of the atmosphere at a specific time and place, including the temperature, relative humidity, cloud cover, precipitation, wind, etc.",
-      "sentence": "The word \"weather\" is used in everyday language.",
+      "sentence": "The weather forecast predicted rain tomorrow.",
       "difficulty": "oneBee"
     },
     {
       "word": "zooming",
       "definition": "To communicate with someone using the Zoom videoconferencing software.",
-      "sentence": "The word \"zooming\" is used in everyday language.",
+      "sentence": "The race car was zooming around the track.",
       "difficulty": "oneBee"
     },
     {
@@ -793,13 +793,13 @@ const wordsData = {
     {
       "word": "turnout",
       "definition": "The act of coming forth.",
-      "sentence": "The word \"turnout\" is used in everyday language.",
+      "sentence": "The school play had a great turnout with a full audience.",
       "difficulty": "oneBee"
     },
     {
       "word": "eaten",
       "definition": "To ingest; to be ingested.",
-      "sentence": "The word \"eaten\" is used in everyday language.",
+      "sentence": "All the birthday cake had been eaten by the guests.",
       "difficulty": "oneBee"
     },
     {
@@ -811,7 +811,7 @@ const wordsData = {
     {
       "word": "journey",
       "definition": "A set amount of travelling, seen as a single unit; a discrete trip, a voyage.",
-      "sentence": "The word \"journey\" is used in everyday language.",
+      "sentence": "Our journey to the mountains took three hours.",
       "difficulty": "oneBee"
     },
     {
@@ -823,7 +823,7 @@ const wordsData = {
     {
       "word": "shouting",
       "definition": "To utter a sudden and loud cry, as in joy, triumph, exultation or anger, or to attract attention, to animate others, etc.",
-      "sentence": "The word \"shouting\" is used in everyday language.",
+      "sentence": "Stop shouting and use your indoor voice please.",
       "difficulty": "oneBee"
     },
     {
@@ -841,19 +841,19 @@ const wordsData = {
     {
       "word": "dinosaur",
       "definition": "In scientific usage, any of the animals belonging to the clade Dinosauria, especially those that existed during the Triassic, Jurassic and Cretaceous periods and are now extinct.",
-      "sentence": "The word \"dinosaur\" is used in everyday language.",
+      "sentence": "The museum had a huge dinosaur skeleton on display.",
       "difficulty": "oneBee"
     },
     {
       "word": "brilliant",
       "definition": "A finely cut gemstone, especially a diamond, cut in a particular form with numerous facets so as to maximize light return through the top (called \"table\") of the stone.",
-      "sentence": "The word \"brilliant\" is used in everyday language.",
+      "sentence": "She had a brilliant idea for the science project.",
       "difficulty": "oneBee"
     },
     {
       "word": "vacuum",
       "definition": "A region of space that contains no matter.",
-      "sentence": "The word \"vacuum\" is used in everyday language.",
+      "sentence": "Please vacuum the living room before company arrives.",
       "difficulty": "oneBee"
     },
     {
@@ -865,7 +865,7 @@ const wordsData = {
     {
       "word": "monsoon",
       "definition": "Any of a number of winds associated with regions where most rain falls during a particular season.",
-      "sentence": "The word \"monsoon\" is used in everyday language.",
+      "sentence": "The monsoon brought heavy rains to the region.",
       "difficulty": "oneBee"
     },
     {
@@ -877,7 +877,7 @@ const wordsData = {
     {
       "word": "avocado",
       "definition": "The large, usually yellowish-green or black, pulpy fruit of the avocado tree.",
-      "sentence": "The word \"avocado\" is used in everyday language.",
+      "sentence": "Sliced avocado makes a healthy sandwich topping.",
       "difficulty": "oneBee"
     },
     {
@@ -895,13 +895,13 @@ const wordsData = {
     {
       "word": "formation",
       "definition": "Something possessing structure or form.",
-      "sentence": "The word \"formation\" is used in everyday language.",
+      "sentence": "The geese flew in a V formation heading south.",
       "difficulty": "oneBee"
     },
     {
       "word": "especially",
       "definition": "(manner) In a special manner; specially.",
-      "sentence": "The word \"especially\" is used in everyday language.",
+      "sentence": "I love all desserts, especially chocolate cake.",
       "difficulty": "oneBee"
     }
   ],
