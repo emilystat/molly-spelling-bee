@@ -21,6 +21,7 @@
         <select id="modeSelect">
           <option value="practice">Practice</option>
           <option value="quiz">Quiz (10 words)</option>
+          <option value="study">Study Mode (10 words)</option>
         </select>
         <button id="startQuizBtn">Start</button>
       </div>
@@ -33,6 +34,30 @@
           <option value="twoBee">Two Bee (Medium) 🐝🐝</option>
           <option value="threeBee">Three Bee (Hard) 🐝🐝🐝</option>
         </select>
+      </div>
+
+      <div id="studyPhaseIndicator" class="study-phase-indicator" style="display: none;">
+        <div class="phase-badge">
+          <span id="phaseText">Study Phase</span>
+          <span id="studyProgressText">Group 1/15 • Word 1/10</span>
+        </div>
+      </div>
+
+      <div id="studyControls" class="study-controls" style="display: none;">
+        <button id="prevStudyWordBtn">⬅️ Previous</button>
+        <button id="nextStudyWordBtn">➡️ Next</button>
+        <button id="startTestBtn" style="display: none;">✅ Start Test</button>
+      </div>
+
+      <div id="studyCard" class="study-card" style="display: none;">
+        <div class="study-word-display">
+          <h2 id="studyWordText"></h2>
+          <button id="hearStudyWordBtn">🔊 Hear Word</button>
+        </div>
+        <div class="study-info">
+          <p><strong>Definition:</strong> <span id="studyDefinition"></span></p>
+          <p><strong>Sentence:</strong> <span id="studySentence"></span></p>
+        </div>
       </div>
 
       <div class="word-controls">
@@ -69,6 +94,17 @@
       <div class="score-row">
         <span id="scoreText">Score: 0 / 0</span>
         <span id="progressText"></span>
+      </div>
+
+      <div id="studyDashboard" class="study-dashboard" style="display: none;">
+        <div class="dashboard-header">
+          <h3>Study Progress</h3>
+        </div>
+        <div id="progressBars"></div>
+        <div class="dashboard-actions">
+          <button id="continueStudyBtn">Continue Studying</button>
+          <button id="bookmarkBtn">📌 Bookmark Position</button>
+        </div>
       </div>
     </section>
   </main>

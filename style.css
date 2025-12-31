@@ -211,3 +211,269 @@ footer {
     font-size: 1.3rem;
   }
 }
+
+/* =============================
+   Study Mode Styles
+   ============================= */
+
+/* Study Phase Indicator */
+.study-phase-indicator {
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #ffeb3b, #ffc107);
+  border-radius: 12px;
+  border: 2px solid #ffca28;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.phase-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#phaseText {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #222;
+}
+
+#studyProgressText {
+  font-size: 0.9rem;
+  color: #555;
+  background: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #ffca28;
+}
+
+/* Study Controls */
+.study-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.study-controls button {
+  flex: 1 1 120px;
+  padding: 0.5rem 1rem;
+}
+
+#startTestBtn {
+  background: #4caf50;
+  color: white;
+  flex: 1 1 100%;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+}
+
+#startTestBtn:hover {
+  background: #45a049;
+}
+
+#prevStudyWordBtn:disabled,
+#nextStudyWordBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Study Card (Flashcard Display) */
+.study-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ffca28;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.study-word-display {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed #ffca28;
+}
+
+.study-word-display h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+#hearStudyWordBtn {
+  background: #2196f3;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+#hearStudyWordBtn:hover {
+  background: #1976d2;
+}
+
+.study-info {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.study-info p {
+  margin-bottom: 0.75rem;
+}
+
+.study-info p:last-child {
+  margin-bottom: 0;
+}
+
+.study-info strong {
+  color: #555;
+}
+
+#studyDefinition,
+#studySentence {
+  color: #222;
+}
+
+/* Study Dashboard */
+.study-dashboard {
+  background: #fff8e1;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 2px solid #ffca28;
+  margin-top: 1rem;
+}
+
+.dashboard-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.dashboard-header h3 {
+  font-size: 1.3rem;
+  color: #222;
+  font-weight: 700;
+}
+
+/* Progress Bars */
+#progressBars {
+  margin-bottom: 1.5rem;
+}
+
+.progress-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #ffca28;
+}
+
+.progress-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.difficulty-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.progress-stats {
+  font-size: 0.85rem;
+  color: #666;
+  background: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #ffca28;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 24px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #ffca28;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  border-radius: 12px;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Dashboard Actions */
+.dashboard-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dashboard-actions button {
+  flex: 1 1 180px;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+}
+
+#continueStudyBtn {
+  background: #4caf50;
+  color: white;
+}
+
+#continueStudyBtn:hover {
+  background: #45a049;
+}
+
+#bookmarkBtn {
+  background: #ff9800;
+  color: white;
+}
+
+#bookmarkBtn:hover {
+  background: #f57c00;
+}
+
+/* Responsive adjustments for study mode */
+@media (max-width: 600px) {
+  .study-word-display h2 {
+    font-size: 1.5rem;
+  }
+
+  .study-controls button {
+    flex: 1 1 100%;
+  }
+
+  .phase-badge {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #studyProgressText {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dashboard-actions button {
+    flex: 1 1 100%;
+  }
+}
