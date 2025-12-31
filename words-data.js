@@ -915,13 +915,13 @@ const wordsData = {
     {
       "word": "scorcher",
       "definition": "One who, or that which, scorches.",
-      "sentence": "The word \"scorcher\" is used in everyday language.",
+      "sentence": "Yesterday was a real scorcher with temperatures over 100 degrees.",
       "difficulty": "twoBee"
     },
     {
       "word": "scavenger",
       "definition": "Someone who scavenges, especially one who searches through rubbish for food or useful things.",
-      "sentence": "The word \"scavenger\" is used in everyday language.",
+      "sentence": "The raccoon is a clever scavenger that searches for food at night.",
       "difficulty": "twoBee"
     },
     {
@@ -933,7 +933,7 @@ const wordsData = {
     {
       "word": "deflated",
       "definition": "To remove air or some other gas from within an elastic container, e.g. a balloon or tyre",
-      "sentence": "The word \"deflated\" is used in everyday language.",
+      "sentence": "The soccer ball deflated after hitting a sharp rock.",
       "difficulty": "twoBee"
     },
     {
@@ -945,25 +945,25 @@ const wordsData = {
     {
       "word": "ration",
       "definition": "A portion of some limited resource allocated to a person or group.",
-      "sentence": "The word \"ration\" is used in everyday language.",
+      "sentence": "During the war, families received a weekly ration of sugar and butter.",
       "difficulty": "twoBee"
     },
     {
       "word": "cosmetics",
       "definition": "Preparations applied externally to change or enhance the beauty of skin, hair, nails, lips, and eyes.",
-      "sentence": "The word \"cosmetics\" is used in everyday language.",
+      "sentence": "The cosmetics counter displayed lipsticks in every color.",
       "difficulty": "twoBee"
     },
     {
       "word": "crawdad",
       "definition": "The crayfish.",
-      "sentence": "The word \"crawdad\" is used in everyday language.",
+      "sentence": "We caught crawdads in the creek behind our house.",
       "difficulty": "twoBee"
     },
     {
       "word": "frustration",
       "definition": "The feeling of annoyance when one's actions are criticized or hindered",
-      "sentence": "The word \"frustration\" is used in everyday language.",
+      "sentence": "She threw her hands up in frustration when the puzzle wouldn't fit.",
       "difficulty": "twoBee"
     },
     {
@@ -987,31 +987,31 @@ const wordsData = {
     {
       "word": "moustache",
       "definition": "A growth of facial hair between the nose and the upper lip.",
-      "sentence": "The word \"moustache\" is used in everyday language.",
+      "sentence": "The detective twirled his long moustache while thinking.",
       "difficulty": "twoBee"
     },
     {
       "word": "artifacts",
       "definition": "An object made or shaped by human hand or labor.",
-      "sentence": "The word \"artifacts\" is used in everyday language.",
+      "sentence": "The museum displayed ancient Egyptian artifacts.",
       "difficulty": "twoBee"
     },
     {
       "word": "perfume",
       "definition": "A pleasant smell; the scent, odor, or odoriferous particles emitted from a sweet-smelling substance; a pleasant odor",
-      "sentence": "The word \"perfume\" is used in everyday language.",
+      "sentence": "Her perfume had a lovely lavender scent.",
       "difficulty": "twoBee"
     },
     {
       "word": "sinister",
       "definition": "Inauspicious, ominous, unlucky, illegitimate (as in bar sinister).",
-      "sentence": "The word \"sinister\" is used in everyday language.",
+      "sentence": "The villain had a sinister smile that made everyone uncomfortable.",
       "difficulty": "twoBee"
     },
     {
       "word": "tuxedo",
       "definition": "A typically black formal jacket worn by men.",
-      "sentence": "The word \"tuxedo\" is used in everyday language.",
+      "sentence": "The groom wore a black tuxedo to the wedding.",
       "difficulty": "twoBee"
     },
     {
@@ -1035,7 +1035,7 @@ const wordsData = {
     {
       "word": "prognosis",
       "definition": "A forecast of the future course of a disease or disorder, based on medical knowledge.",
-      "sentence": "The word \"prognosis\" is used in everyday language.",
+      "sentence": "The doctor gave a positive prognosis for her recovery.",
       "difficulty": "twoBee"
     },
     {
@@ -1047,25 +1047,25 @@ const wordsData = {
     {
       "word": "sequins",
       "definition": "Any of various small gold coins minted in Italy and Turkey.",
-      "sentence": "The word \"sequins\" is used in everyday language.",
+      "sentence": "Her dress sparkled with silver sequins under the lights.",
       "difficulty": "twoBee"
     },
     {
       "word": "gallop",
       "definition": "The fastest gait of a horse, a two-beat stride during which all four legs are off the ground simultaneously.",
-      "sentence": "The word \"gallop\" is used in everyday language.",
+      "sentence": "The horses gallop freely across the open meadow.",
       "difficulty": "twoBee"
     },
     {
       "word": "fabulous",
       "definition": "Of or relating to fable, myth or legend.",
-      "sentence": "The word \"fabulous\" is used in everyday language.",
+      "sentence": "The fireworks display was absolutely fabulous.",
       "difficulty": "twoBee"
     },
     {
       "word": "lanky",
       "definition": "Tall, slim, and rather ungraceful or awkward.",
-      "sentence": "The word \"lanky\" is used in everyday language.",
+      "sentence": "The lanky basketball player easily reached the high shelf.",
       "difficulty": "twoBee"
     },
     {
@@ -1089,19 +1089,19 @@ const wordsData = {
     {
       "word": "sardines",
       "definition": "Any one of several species of small herring which are commonly preserved in olive oil or in tins for food, especially the pilchard, or European sardine Sardina pilchardus (syn. Clupea pilchardus). The California sardine Sardinops sagax (syn. Clupea sagax) is similar. The American sardines of the Atlantic coast are mostly the young of the Atlantic herring and of the menhaden.",
-      "sentence": "The word \"sardines\" is used in everyday language.",
+      "sentence": "We packed sardines and crackers for our camping trip.",
       "difficulty": "twoBee"
     },
     {
       "word": "anguish",
       "definition": "Extreme pain, either of body or mind; excruciating distress.",
-      "sentence": "The word \"anguish\" is used in everyday language.",
+      "sentence": "The mother cried out in anguish when she heard the news.",
       "difficulty": "twoBee"
     },
     {
       "word": "conical",
       "definition": "A bullet with a conical shape.",
-      "sentence": "The word \"conical\" is used in everyday language.",
+      "sentence": "The wizard wore a tall, conical hat covered in stars.",
       "difficulty": "twoBee"
     },
     {
@@ -1113,7 +1113,7 @@ const wordsData = {
     {
       "word": "lilt",
       "definition": "Animated, brisk motion; spirited rhythm; sprightliness.",
-      "sentence": "The word \"lilt\" is used in everyday language.",
+      "sentence": "Her voice had a musical lilt when she spoke.",
       "difficulty": "twoBee"
     },
     {
@@ -1131,7 +1131,7 @@ const wordsData = {
     {
       "word": "democracy",
       "definition": "Rule by the people, especially as a form of government; either directly or through elected representatives (representative democracy).",
-      "sentence": "The word \"democracy\" is used in everyday language.",
+      "sentence": "In a democracy, citizens vote to elect their leaders.",
       "difficulty": "twoBee"
     },
     {
@@ -1143,7 +1143,7 @@ const wordsData = {
     {
       "word": "beige",
       "definition": "A slightly yellowish gray colour, as that of unbleached wool.",
-      "sentence": "The word \"beige\" is used in everyday language.",
+      "sentence": "The living room walls were painted a soft beige color.",
       "difficulty": "twoBee"
     },
     {
@@ -1155,25 +1155,25 @@ const wordsData = {
     {
       "word": "grimace",
       "definition": "A contorted facial expression, often expressing contempt or pain.",
-      "sentence": "The word \"grimace\" is used in everyday language.",
+      "sentence": "He made a grimace after tasting the sour lemon.",
       "difficulty": "twoBee"
     },
     {
       "word": "gaunt",
       "definition": "Lean, angular and bony",
-      "sentence": "The word \"gaunt\" is used in everyday language.",
+      "sentence": "After his illness, he looked gaunt and needed rest.",
       "difficulty": "twoBee"
     },
     {
       "word": "enormous",
       "definition": "Deviating from the norm; unusual, extraordinary.",
-      "sentence": "The word \"enormous\" is used in everyday language.",
+      "sentence": "The enormous elephant trumpeted loudly at the zoo.",
       "difficulty": "twoBee"
     },
     {
       "word": "geranium",
       "definition": "Any flowering plant of the genus Geranium, the cranesbills, of family Geraniaceae.",
-      "sentence": "The word \"geranium\" is used in everyday language.",
+      "sentence": "Red geraniums bloomed in pots on the front porch.",
       "difficulty": "twoBee"
     },
     {
@@ -1191,13 +1191,13 @@ const wordsData = {
     {
       "word": "ebony",
       "definition": "A hard, dense, deep black wood from various subtropical and tropical trees, especially of the genus Diospyros.",
-      "sentence": "The word \"ebony\" is used in everyday language.",
+      "sentence": "The piano keys were made of polished ebony and ivory.",
       "difficulty": "twoBee"
     },
     {
       "word": "foreign",
       "definition": "A foreign person, particularly:",
-      "sentence": "The word \"foreign\" is used in everyday language.",
+      "sentence": "She studied several foreign languages in school.",
       "difficulty": "twoBee"
     },
     {
@@ -1227,25 +1227,25 @@ const wordsData = {
     {
       "word": "imitation",
       "definition": "The act of imitating.",
-      "sentence": "The word \"imitation\" is used in everyday language.",
+      "sentence": "The cheap imitation jewelry broke after one day.",
       "difficulty": "twoBee"
     },
     {
       "word": "miniature",
       "definition": "Greatly diminished size or form; reduced scale.",
-      "sentence": "The word \"miniature\" is used in everyday language.",
+      "sentence": "The dollhouse contained miniature furniture and tiny dishes.",
       "difficulty": "twoBee"
     },
     {
       "word": "receptionist",
       "definition": "An employee (such as a secretary) who works in reception (receiving visitors and/or calls) for a person or business, especially an office.",
-      "sentence": "The word \"receptionist\" is used in everyday language.",
+      "sentence": "The receptionist greeted visitors with a friendly smile.",
       "difficulty": "twoBee"
     },
     {
       "word": "preamble",
       "definition": "A short preliminary statement or remark, especially an explanatory introduction to a formal document or statute.",
-      "sentence": "The word \"preamble\" is used in everyday language.",
+      "sentence": "The Constitution begins with a preamble explaining its purpose.",
       "difficulty": "twoBee"
     },
     {
@@ -1257,13 +1257,13 @@ const wordsData = {
     {
       "word": "reprimanding",
       "definition": "To reprove in a formal or official way.",
-      "sentence": "The word \"reprimanding\" is used in everyday language.",
+      "sentence": "The coach was reprimanding the players for being late.",
       "difficulty": "twoBee"
     },
     {
       "word": "commotion",
       "definition": "A state of turbulent motion.",
-      "sentence": "The word \"commotion\" is used in everyday language.",
+      "sentence": "A loud commotion in the hallway interrupted the class.",
       "difficulty": "twoBee"
     },
     {
@@ -1275,13 +1275,13 @@ const wordsData = {
     {
       "word": "immigrants",
       "definition": "A non-native person who comes to a country from another country in order to permanently settle there.",
-      "sentence": "The word \"immigrants\" is used in everyday language.",
+      "sentence": "Immigrants from many countries came through Ellis Island.",
       "difficulty": "twoBee"
     },
     {
       "word": "steeple",
       "definition": "A tall tower, often on a church, normally topped with a spire.",
-      "sentence": "The word \"steeple\" is used in everyday language.",
+      "sentence": "The church steeple towered above the other buildings.",
       "difficulty": "twoBee"
     },
     {
@@ -1293,7 +1293,7 @@ const wordsData = {
     {
       "word": "lanyards",
       "definition": "A short rope used for fastening rigging.",
-      "sentence": "The word \"lanyards\" is used in everyday language.",
+      "sentence": "Students wore their ID badges on colorful lanyards.",
       "difficulty": "twoBee"
     },
     {
@@ -1305,25 +1305,25 @@ const wordsData = {
     {
       "word": "parchment",
       "definition": "Material, made from the polished skin of a calf, sheep, goat or other animal, used like paper for writing.",
-      "sentence": "The word \"parchment\" is used in everyday language.",
+      "sentence": "The ancient scroll was written on yellowed parchment.",
       "difficulty": "twoBee"
     },
     {
       "word": "ramshackle",
       "definition": "To ransack.",
-      "sentence": "The word \"ramshackle\" is used in everyday language.",
+      "sentence": "The ramshackle barn was falling apart and needed repairs.",
       "difficulty": "twoBee"
     },
     {
       "word": "fugitive",
       "definition": "A person who flees or escapes and travels secretly from place to place, and sometimes using disguises and aliases to conceal his/her identity, as to avoid law authorities in order to avoid an arrest or prosecution; or to avoid some other unwanted situation.",
-      "sentence": "The word \"fugitive\" is used in everyday language.",
+      "sentence": "Police searched for the fugitive who had escaped from prison.",
       "difficulty": "twoBee"
     },
     {
       "word": "heron",
       "definition": "A long-legged, long-necked wading bird of the family Ardeidae.",
-      "sentence": "The word \"heron\" is used in everyday language.",
+      "sentence": "A great blue heron stood motionless in the shallow water.",
       "difficulty": "twoBee"
     },
     {
@@ -1335,19 +1335,19 @@ const wordsData = {
     {
       "word": "nomad",
       "definition": "A member of a society or class who herd animals from pasture to pasture with no fixed home.",
-      "sentence": "The word \"nomad\" is used in everyday language.",
+      "sentence": "The nomad traveled across the desert with his camels.",
       "difficulty": "twoBee"
     },
     {
       "word": "billowed",
       "definition": "To surge or roll in billows.",
-      "sentence": "The word \"billowed\" is used in everyday language.",
+      "sentence": "Smoke billowed from the chimney on the cold winter morning.",
       "difficulty": "twoBee"
     },
     {
       "word": "skewer",
       "definition": "A long pin, normally made of metal or wood, used to secure food during cooking.",
-      "sentence": "The word \"skewer\" is used in everyday language.",
+      "sentence": "Thread the vegetables onto a wooden skewer for grilling.",
       "difficulty": "twoBee"
     },
     {
@@ -1359,49 +1359,49 @@ const wordsData = {
     {
       "word": "lunacy",
       "definition": "(of a person or group of people) The state of being mad, insanity",
-      "sentence": "The word \"lunacy\" is used in everyday language.",
+      "sentence": "It would be pure lunacy to go swimming in that storm.",
       "difficulty": "twoBee"
     },
     {
       "word": "conjure",
       "definition": "The practice of magic; hoodoo; conjuration.",
-      "sentence": "The word \"conjure\" is used in everyday language.",
+      "sentence": "The magician tried to conjure a rabbit from his hat.",
       "difficulty": "twoBee"
     },
     {
       "word": "bracken",
       "definition": "Any of several coarse ferns, of the genus Pteridium, that form dense thickets; often poisonous to livestock.",
-      "sentence": "The word \"bracken\" is used in everyday language.",
+      "sentence": "Deer hide among the bracken ferns in the forest.",
       "difficulty": "twoBee"
     },
     {
       "word": "noggin",
       "definition": "A small mug, cup or ladle.",
-      "sentence": "The word \"noggin\" is used in everyday language.",
+      "sentence": "He bumped his noggin on the low doorway.",
       "difficulty": "twoBee"
     },
     {
       "word": "neon",
       "definition": "The chemical element (symbol Ne) with an atomic number of 10. The lightest of the noble gases, it is a colourless, odorless inert gas.",
-      "sentence": "The word \"neon\" is used in everyday language.",
+      "sentence": "Bright neon signs lit up the city street at night.",
       "difficulty": "twoBee"
     },
     {
       "word": "rakish",
       "definition": "Dashingly, carelessly, or sportingly unconventional or stylish; jaunty; characterized by a devil-may-care unconventionality; having a somewhat disreputable quality or appearance.",
-      "sentence": "The word \"rakish\" is used in everyday language.",
+      "sentence": "The pirate wore his hat at a rakish angle.",
       "difficulty": "twoBee"
     },
     {
       "word": "hypnosis",
       "definition": "A trancelike state, artificially induced, in which a person has a heightened suggestibility, and in which suppressed memories may be experienced.",
-      "sentence": "The word \"hypnosis\" is used in everyday language.",
+      "sentence": "The therapist used hypnosis to help him overcome his fear.",
       "difficulty": "twoBee"
     },
     {
       "word": "rotunda",
       "definition": "A round building, usually small, often with a dome",
-      "sentence": "The word \"rotunda\" is used in everyday language.",
+      "sentence": "The capitol building features a magnificent domed rotunda.",
       "difficulty": "twoBee"
     },
     {
@@ -1413,79 +1413,79 @@ const wordsData = {
     {
       "word": "toiletries",
       "definition": "Any item used for personal hygiene or grooming.",
-      "sentence": "The word \"toiletries\" is used in everyday language.",
+      "sentence": "She packed toiletries including shampoo and toothpaste.",
       "difficulty": "twoBee"
     },
     {
       "word": "gleaned",
       "definition": "To collect (grain, grapes, etc.) left behind after the main harvest or gathering.",
-      "sentence": "The word \"gleaned\" is used in everyday language.",
+      "sentence": "The detective gleaned important clues from the witness.",
       "difficulty": "twoBee"
     },
     {
       "word": "jeered",
       "definition": "(jeer at) To utter sarcastic or mocking comments; to speak with mockery or derision; to use taunting language.",
-      "sentence": "The word \"jeered\" is used in everyday language.",
+      "sentence": "The crowd jeered at the opposing team.",
       "difficulty": "twoBee"
     },
     {
       "word": "winsome",
       "definition": "Charming, engaging, winning; inspiring approval and trust, especially if in an innocent manner.",
-      "sentence": "The word \"winsome\" is used in everyday language.",
+      "sentence": "The puppy had a winsome expression that melted hearts.",
       "difficulty": "twoBee"
     },
     {
       "word": "prattling",
       "definition": "To speak incessantly and in a childish manner; to babble.",
-      "sentence": "The word \"prattling\" is used in everyday language.",
+      "sentence": "The toddler was prattling happily about her day.",
       "difficulty": "twoBee"
     },
     {
       "word": "galore",
       "definition": "An abundance; plenty.",
-      "sentence": "The word \"galore\" is used in everyday language.",
+      "sentence": "The carnival had games, rides, and prizes galore.",
       "difficulty": "twoBee"
     },
     {
       "word": "emporium",
       "definition": "A city or region which is a major trading centre; also, a place within a city for commerce and trading; a marketplace.",
-      "sentence": "The word \"emporium\" is used in everyday language.",
+      "sentence": "The toy emporium sold every game imaginable.",
       "difficulty": "twoBee"
     },
     {
       "word": "atrium",
       "definition": "A central room or space in ancient Roman homes, open to the sky in the middle; a similar space in other buildings.",
-      "sentence": "The word \"atrium\" is used in everyday language.",
+      "sentence": "Plants filled the sunny atrium in the center of the building.",
       "difficulty": "twoBee"
     },
     {
       "word": "eccentric",
       "definition": "One who does not behave like others.",
-      "sentence": "The word \"eccentric\" is used in everyday language.",
+      "sentence": "The eccentric inventor wore mismatched socks and a bow tie.",
       "difficulty": "twoBee"
     },
     {
       "word": "savant",
       "definition": "A person of learning, especially one who is versed in literature or science.",
-      "sentence": "The word \"savant\" is used in everyday language.",
+      "sentence": "The mathematical savant could multiply huge numbers instantly.",
       "difficulty": "twoBee"
     },
     {
       "word": "almanac",
       "definition": "A book or table listing nautical, astronomical, astrological or other events for the year; sometimes, but not essentially, containing historical and statistical information.",
-      "sentence": "The word \"almanac\" is used in everyday language.",
+      "sentence": "Farmers consulted the almanac to predict the weather.",
       "difficulty": "twoBee"
     },
     {
       "word": "hippies",
       "definition": "(1950s slang) A teenager who imitated the beatniks.",
-      "sentence": "The word \"hippies\" is used in everyday language.",
+      "sentence": "In the 1960s, hippies promoted peace and love.",
       "difficulty": "twoBee"
     },
     {
       "word": "samosas",
       "definition": "A snack, of Indian origin, consisting of a deep-fried triangular turnover filled with vegetables (especially potatoes) or meat.",
-      "sentence": "The word \"samosas\" is used in everyday language.",
+      "sentence": "We enjoyed crispy samosas filled with spiced potatoes.",
       "difficulty": "twoBee"
     },
     {
@@ -1497,7 +1497,7 @@ const wordsData = {
     {
       "word": "pistachio",
       "definition": "A deciduous tree (Pistacia vera) grown in parts of Asia for its drupaceous fruit.",
-      "sentence": "The word \"pistachio\" is used in everyday language.",
+      "sentence": "Pistachio ice cream is my favorite flavor.",
       "difficulty": "twoBee"
     },
     {
@@ -1515,13 +1515,13 @@ const wordsData = {
     {
       "word": "warlock",
       "definition": "A male magic-user; a male witch.",
-      "sentence": "The word \"warlock\" is used in everyday language.",
+      "sentence": "The evil warlock cast a spell on the kingdom.",
       "difficulty": "twoBee"
     },
     {
       "word": "colossus",
       "definition": "A statue of gigantic size. The name was especially applied to certain famous statues in antiquity, as the Colossus of Nero in Rome and the Colossus of Rhodes, one of the Seven Wonders of the Ancient World.",
-      "sentence": "The word \"colossus\" is used in everyday language.",
+      "sentence": "The ancient Colossus of Rhodes was one of the Seven Wonders.",
       "difficulty": "twoBee"
     },
     {
@@ -1533,7 +1533,7 @@ const wordsData = {
     {
       "word": "dimensional",
       "definition": "Of or pertaining to dimensions.",
-      "sentence": "The word \"dimensional\" is used in everyday language.",
+      "sentence": "The movie was shown in three-dimensional format.",
       "difficulty": "twoBee"
     },
     {
@@ -1563,7 +1563,7 @@ const wordsData = {
     {
       "word": "cavorting",
       "definition": "(originally intransitive) To prance, said of mounts",
-      "sentence": "The word \"cavorting\" is used in everyday language.",
+      "sentence": "Dolphins were cavorting playfully in the waves.",
       "difficulty": "twoBee"
     },
     {
@@ -1581,37 +1581,37 @@ const wordsData = {
     {
       "word": "battlements",
       "definition": "In fortification: an indented parapet, formed by a series of rising members called cops or merlons, separated by openings called crenelles or embrasures, the soldier sheltering himself behind the merlon while he fires through the embrasure or through a loophole in the battlement.",
-      "sentence": "The word \"battlements\" is used in everyday language.",
+      "sentence": "Guards patrolled the castle battlements watching for enemies.",
       "difficulty": "twoBee"
     },
     {
       "word": "deferential",
       "definition": "Respectful and considerate; showing deference.",
-      "sentence": "The word \"deferential\" is used in everyday language.",
+      "sentence": "The student spoke in a deferential tone to the principal.",
       "difficulty": "twoBee"
     },
     {
       "word": "albatross",
       "definition": "Any of various large seabirds of the family Diomedeidae ranging widely in the Southern Ocean and the North Pacific and having a hooked beak and long narrow wings.",
-      "sentence": "The word \"albatross\" is used in everyday language.",
+      "sentence": "The albatross has the largest wingspan of any bird.",
       "difficulty": "twoBee"
     },
     {
       "word": "khaki",
       "definition": "A dull, yellowish-brown colour, the colour of dust.",
-      "sentence": "The word \"khaki\" is used in everyday language.",
+      "sentence": "He wore khaki pants and a blue shirt to work.",
       "difficulty": "twoBee"
     },
     {
       "word": "opalescent",
       "definition": "Exhibiting a milky iridescence like that of an opal.",
-      "sentence": "The word \"opalescent\" is used in everyday language.",
+      "sentence": "The soap bubbles shimmered with opalescent colors.",
       "difficulty": "twoBee"
     },
     {
       "word": "asphalt",
       "definition": "A sticky, black and highly viscous liquid or semi-solid, composed almost entirely of bitumen, that is present in most crude petroleums and in some natural deposits.",
-      "sentence": "The word \"asphalt\" is used in everyday language.",
+      "sentence": "Workers poured hot asphalt to repave the road.",
       "difficulty": "twoBee"
     },
     {
@@ -1623,19 +1623,19 @@ const wordsData = {
     {
       "word": "talcum",
       "definition": "Powdered and perfumed talc for toilet use.",
-      "sentence": "The word \"talcum\" is used in everyday language.",
+      "sentence": "She sprinkled talcum powder on the baby after his bath.",
       "difficulty": "twoBee"
     },
     {
       "word": "tranquilizer",
       "definition": "That which tranquillizes or soothes.",
-      "sentence": "The word \"tranquilizer\" is used in everyday language.",
+      "sentence": "The veterinarian gave the anxious dog a mild tranquilizer.",
       "difficulty": "twoBee"
     },
     {
       "word": "equestrian",
       "definition": "An equestrian person; a horserider.",
-      "sentence": "The word \"equestrian\" is used in everyday language.",
+      "sentence": "The equestrian competition featured skilled horse riders.",
       "difficulty": "twoBee"
     },
     {
@@ -1653,7 +1653,7 @@ const wordsData = {
     {
       "word": "manticores",
       "definition": "A beast with the body of a lion (usually red), the tail of a scorpion, and the head/face of a man with a mouth filled with multiple rows of sharp teeth (like a shark), said to be able to shoot spikes from its tail or mane to paralyse prey. It may be horned, winged, or both; its voice is described as a mixture of pipes and trumpets.",
-      "sentence": "The word \"manticores\" is used in everyday language.",
+      "sentence": "In mythology, manticores were fearsome beasts with lion bodies.",
       "difficulty": "twoBee"
     },
     {
@@ -1671,7 +1671,7 @@ const wordsData = {
     {
       "word": "guttural",
       "definition": "A harsh and throaty spoken sound",
-      "sentence": "The word \"guttural\" is used in everyday language.",
+      "sentence": "The actor used a deep, guttural voice for the villain.",
       "difficulty": "twoBee"
     },
     {
@@ -1683,7 +1683,7 @@ const wordsData = {
     {
       "word": "courier",
       "definition": "A person who looks after and guides tourists",
-      "sentence": "The word \"courier\" is used in everyday language.",
+      "sentence": "A courier delivered the important documents by hand.",
       "difficulty": "twoBee"
     },
     {
@@ -1695,13 +1695,13 @@ const wordsData = {
     {
       "word": "psyche",
       "definition": "The human soul, mind, or spirit.",
-      "sentence": "The word \"psyche\" is used in everyday language.",
+      "sentence": "The traumatic event affected her psyche for years.",
       "difficulty": "twoBee"
     },
     {
       "word": "stucco",
       "definition": "A plaster that is used to coat (interior or) exterior walls, or used for mouldings.",
-      "sentence": "The word \"stucco\" is used in everyday language.",
+      "sentence": "The house exterior was covered in white stucco.",
       "difficulty": "twoBee"
     },
     {
@@ -1713,7 +1713,7 @@ const wordsData = {
     {
       "word": "schema",
       "definition": "An outline or image universally applicable to a general conception, under which it is likely to be presented to the mind (for example, a body schema).",
-      "sentence": "The word \"schema\" is used in everyday language.",
+      "sentence": "The database schema organized all the information logically.",
       "difficulty": "twoBee"
     },
     {
@@ -1743,43 +1743,43 @@ const wordsData = {
     {
       "word": "archipelago",
       "definition": "(collective) A group of islands.",
-      "sentence": "The word \"archipelago\" is used in everyday language.",
+      "sentence": "The Philippines is an archipelago of over 7,000 islands.",
       "difficulty": "twoBee"
     },
     {
       "word": "serape",
       "definition": "A type of blanket worn as a cloak, especially by Spanish-Americans, or used as a saddle blanket.",
-      "sentence": "The word \"serape\" is used in everyday language.",
+      "sentence": "The colorful serape kept him warm on cold desert nights.",
       "difficulty": "twoBee"
     },
     {
       "word": "puissance",
       "definition": "Power, might or potency.",
-      "sentence": "The word \"puissance\" is used in everyday language.",
+      "sentence": "The knight demonstrated his puissance in the jousting tournament.",
       "difficulty": "twoBee"
     },
     {
       "word": "pinioning",
       "definition": "To cut off the pinion of a bird’s wing, or otherwise disable or bind its wings, in order to prevent it from flying.",
-      "sentence": "The word \"pinioning\" is used in everyday language.",
+      "sentence": "The wrestler succeeded in pinioning his opponent's arms.",
       "difficulty": "twoBee"
     },
     {
       "word": "chignon",
       "definition": "A roll or twist of hair worn at the nape of the neck; a bun.",
-      "sentence": "The word \"chignon\" is used in everyday language.",
+      "sentence": "She wore her hair in an elegant chignon for the formal dinner.",
       "difficulty": "twoBee"
     },
     {
       "word": "pheromone",
       "definition": "A chemical secreted by an animal, especially an insect, that affects the development or behavior of other members of the same species, functioning often as a means of attracting a member of the opposite sex.",
-      "sentence": "The word \"pheromone\" is used in everyday language.",
+      "sentence": "Ants follow pheromone trails left by other ants.",
       "difficulty": "twoBee"
     },
     {
       "word": "galleon",
       "definition": "A large, three masted, square rigged sailing ship with at least two decks.",
-      "sentence": "The word \"galleon\" is used in everyday language.",
+      "sentence": "The Spanish galleon sailed across the Atlantic laden with treasure.",
       "difficulty": "twoBee"
     },
     {
@@ -1791,13 +1791,13 @@ const wordsData = {
     {
       "word": "chartreuse",
       "definition": "A yellow or green liqueur made by Carthusian monks.",
-      "sentence": "The word \"chartreuse\" is used in everyday language.",
+      "sentence": "The curtains were an unusual shade of chartreuse green.",
       "difficulty": "twoBee"
     },
     {
       "word": "wainscoting",
       "definition": "Wooden (especially oaken) panelling on the lower part of a room’s walls.",
-      "sentence": "The word \"wainscoting\" is used in everyday language.",
+      "sentence": "Dark wood wainscoting covered the lower half of the walls.",
       "difficulty": "twoBee"
     },
     {
