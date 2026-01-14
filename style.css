@@ -477,3 +477,375 @@ footer {
     flex: 1 1 100%;
   }
 }
+
+/* Mark Difficult Button */
+.mark-difficult-btn {
+  background: #ff9800;
+  color: white;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.mark-difficult-btn:hover {
+  background: #f57c00;
+}
+
+.mark-difficult-btn.marked {
+  background: #ffc107;
+  border: 2px solid #ff9800;
+  cursor: not-allowed;
+}
+
+.mark-difficult-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Difficult Words Summary */
+.difficult-words-summary {
+  background: #fff3e0;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #ff9800;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.summary-header h4 {
+  font-size: 1rem;
+  color: #222;
+  margin: 0;
+}
+
+#difficultWordsCount {
+  background: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #ff9800;
+  font-weight: 600;
+  border: 1px solid #ff9800;
+}
+
+.review-difficult-btn {
+  background: #ff9800;
+  color: white;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.review-difficult-btn:hover {
+  background: #f57c00;
+}
+
+.review-difficult-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.manage-difficult-btn {
+  background: white;
+  color: #ff9800;
+  border: 2px solid #ff9800;
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.manage-difficult-btn:hover {
+  background: #fff3e0;
+}
+
+.manage-difficult-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Reset Buttons */
+.reset-difficulty-btn {
+  background: #ff5722;
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.reset-difficulty-btn:hover {
+  background: #e64a19;
+}
+
+.reset-all-btn {
+  background: #f44336;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.reset-all-btn:hover {
+  background: #d32f2f;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  border: 2px solid #ffca28;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.modal-content p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.btn-danger {
+  background: #f44336;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-danger:hover {
+  background: #d32f2f;
+}
+
+.btn-secondary {
+  background: #9e9e9e;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #757575;
+}
+
+/* Difficult Words Modal */
+.modal-large {
+  max-width: 600px;
+  max-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #ffca28;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.close-btn {
+  background: #f44336;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: #d32f2f;
+}
+
+.modal-body {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.difficult-words-filter {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: #fff8e1;
+  border-radius: 8px;
+  border: 1px solid #ffca28;
+  flex-wrap: wrap;
+}
+
+.difficult-words-filter label {
+  font-weight: 600;
+}
+
+.difficult-words-filter select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 150px;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.btn-danger-small {
+  background: #f44336;
+  color: white;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-danger-small:hover {
+  background: #d32f2f;
+}
+
+/* Difficult Words List */
+.difficult-words-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.difficult-word-item {
+  background: white;
+  border-radius: 8px;
+  padding: 0.75rem;
+  border: 1px solid #ffca28;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.difficult-word-info {
+  flex: 1;
+}
+
+.difficult-word-info .word {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 0.25rem;
+}
+
+.difficult-word-info .meta {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.difficult-word-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.difficult-word-actions button {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.unmark-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.unmark-btn:hover {
+  background: #45a049;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.empty-state h4 {
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+/* Progress item for reset button */
+.progress-item {
+  position: relative;
+}

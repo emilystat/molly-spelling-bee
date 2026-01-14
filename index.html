@@ -22,6 +22,7 @@
           <option value="practice">Practice</option>
           <option value="quiz">Quiz (10 words)</option>
           <option value="study">Study Mode (10 words)</option>
+          <option value="reviewDifficult">Review Difficult Words</option>
         </select>
         <button id="startQuizBtn">Start</button>
       </div>
@@ -53,6 +54,7 @@
         <div class="study-word-display">
           <h2 id="studyWordText"></h2>
           <button id="hearStudyWordBtn">🔊 Hear Word</button>
+          <button id="markDifficultBtn" class="mark-difficult-btn">⭐ Mark Difficult</button>
         </div>
         <div class="study-info">
           <p><strong>Definition:</strong> <span id="studyDefinition"></span></p>
@@ -100,13 +102,67 @@
         <div class="dashboard-header">
           <h3>Study Progress</h3>
         </div>
+
+        <div id="difficultWordsSummary" class="difficult-words-summary">
+          <div class="summary-header">
+            <h4>⭐ Difficult Words</h4>
+            <span id="difficultWordsCount">0 words</span>
+          </div>
+          <button id="reviewDifficultBtn" class="review-difficult-btn">
+            📚 Review Difficult Words
+          </button>
+          <button id="manageDifficultBtn" class="manage-difficult-btn">
+            ⚙️ Manage List
+          </button>
+        </div>
+
         <div id="progressBars"></div>
         <div class="dashboard-actions">
           <button id="continueStudyBtn">Continue Studying</button>
           <button id="bookmarkBtn">📌 Bookmark Position</button>
+          <button id="resetAllBtn" class="reset-all-btn">🔄 Reset All Progress</button>
         </div>
       </div>
     </section>
+
+    <!-- Reset Confirmation Modal -->
+    <div id="resetModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h3 id="resetModalTitle">Reset Progress?</h3>
+        <p id="resetModalMessage">
+          This will reset your study progress. Your difficult words will be preserved.
+        </p>
+        <div class="modal-actions">
+          <button id="confirmResetBtn" class="btn-danger">Yes, Reset</button>
+          <button id="cancelResetBtn" class="btn-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Difficult Words Management Modal -->
+    <div id="difficultWordsModal" class="modal" style="display: none;">
+      <div class="modal-content modal-large">
+        <div class="modal-header">
+          <h3>Manage Difficult Words</h3>
+          <button id="closeDifficultModal" class="close-btn">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="difficult-words-filter">
+            <label>Filter by:</label>
+            <select id="difficultWordsFilter">
+              <option value="all">All Difficulties</option>
+              <option value="oneBee">One Bee 🐝</option>
+              <option value="twoBee">Two Bee 🐝🐝</option>
+              <option value="threeBee">Three Bee 🐝🐝🐝</option>
+            </select>
+            <button id="clearAllDifficultBtn" class="btn-danger-small">Clear All</button>
+          </div>
+          <div id="difficultWordsList" class="difficult-words-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer>
