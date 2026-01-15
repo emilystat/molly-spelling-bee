@@ -34,6 +34,7 @@ const hintBtn = document.getElementById("hintBtn");
 const answerInput = document.getElementById("answerInput");
 const checkBtn = document.getElementById("checkBtn");
 const nextWordBtn = document.getElementById("nextWordBtn");
+const markDifficultTestBtn = document.getElementById("markDifficultTestBtn");
 
 const resultText = document.getElementById("resultText");
 const definitionText = document.getElementById("definitionText");
@@ -154,10 +155,16 @@ if (window.speechSynthesis) {
 
 function pickRandomWord() {
   let availableWords = [];
+  let wordDifficulty = currentDifficulty;
+
   if (currentDifficulty === "all") {
-    availableWords = [...wordsData.oneBee, ...wordsData.twoBee, ...wordsData.threeBee];
+    // When "all" is selected, we need to track which difficulty each word came from
+    const oneBeeWords = wordsData.oneBee.map(w => ({...w, difficulty: "oneBee"}));
+    const twoBeeWords = wordsData.twoBee.map(w => ({...w, difficulty: "twoBee"}));
+    const threeBeeWords = wordsData.threeBee.map(w => ({...w, difficulty: "threeBee"}));
+    availableWords = [...oneBeeWords, ...twoBeeWords, ...threeBeeWords];
   } else {
-    availableWords = wordsData[currentDifficulty];
+    availableWords = wordsData[currentDifficulty].map(w => ({...w, difficulty: currentDifficulty}));
   }
 
   if (!availableWords.length) {
@@ -209,6 +216,8 @@ function loadStudyProgress() {
     const saved = localStorage.getItem("mollySpellingBee_studyProgress");
     if (saved) {
       studyProgress = JSON.parse(saved);
+      // Clean up any corrupted difficult words data
+      cleanupDifficultWords();
     } else {
       studyProgress = initializeStudyProgress();
       saveStudyProgress();
@@ -217,6 +226,24 @@ function loadStudyProgress() {
     console.error("Error loading study progress:", e);
     studyProgress = initializeStudyProgress();
   }
+}
+
+function cleanupDifficultWords() {
+  // Remove any difficult words that have invalid difficulty values
+  ["oneBee", "twoBee", "threeBee"].forEach(diff => {
+    if (studyProgress[diff].difficultWords) {
+      const before = studyProgress[diff].difficultWords.length;
+      studyProgress[diff].difficultWords = studyProgress[diff].difficultWords.filter(w => {
+        // Keep only words with valid difficulty matching this category
+        return w.difficulty === diff && w.word && w.definition;
+      });
+      const after = studyProgress[diff].difficultWords.length;
+      if (before !== after) {
+        console.log(`Cleaned up ${before - after} invalid difficult words from ${diff}`);
+        saveStudyProgress();
+      }
+    }
+  });
 }
 
 function saveStudyProgress() {
@@ -239,7 +266,9 @@ function getStudyGroupWords(difficulty, groupIndex) {
 
   const startIdx = groupIndex * 10;
   const endIdx = Math.min(startIdx + 10, words.length);
-  return words.slice(startIdx, endIdx);
+
+  // Attach difficulty property to each word
+  return words.slice(startIdx, endIdx).map(w => ({...w, difficulty: difficulty}));
 }
 
 function markGroupComplete(difficulty, groupIndex) {
@@ -401,6 +430,19 @@ function initializeDifficultWords(difficulty) {
 }
 
 function markWordAsDifficult(wordObj, difficulty) {
+  // Safeguard: never allow difficulty="all"
+  if (difficulty === "all" || !difficulty) {
+    console.error("Invalid difficulty:", difficulty, "for word:", wordObj.word);
+    alert("Error: Cannot mark word without a valid difficulty level. Please select a specific difficulty (One Bee, Two Bee, or Three Bee).");
+    return false;
+  }
+
+  // Validate difficulty is valid
+  if (!studyProgress[difficulty]) {
+    console.error("Invalid difficulty level:", difficulty);
+    return false;
+  }
+
   initializeDifficultWords(difficulty);
 
   // Check if already marked
@@ -424,6 +466,9 @@ function markWordAsDifficult(wordObj, difficulty) {
   });
 
   saveStudyProgress();
+
+  console.log("Word marked as difficult:", wordObj.word, "Difficulty:", difficulty);
+
   return true; // Successfully marked
 }
 
@@ -507,11 +552,12 @@ function setCurrentWord(wordObj) {
   sentenceText.textContent = "";
 
   hideNextWordButton();
+  hideMarkDifficultTestButton();
 }
 
 function updateScoreDisplay() {
   scoreText.textContent = `Score: ${correctCount} / ${totalAttempts}`;
-  if (currentMode === "quiz" && quizWords.length > 0) {
+  if ((currentMode === "quiz" || studyPhase === "testing" || studyPhase === "testingDifficult") && quizWords.length > 0) {
     progressText.textContent = `Question ${quizIndex + 1} of ${quizWords.length}`;
   } else {
     progressText.textContent = "";
@@ -524,6 +570,34 @@ function showNextWordButton() {
 
 function hideNextWordButton() {
   nextWordBtn.style.display = "none";
+}
+
+function showMarkDifficultTestButton() {
+  if (!markDifficultTestBtn) return;
+  markDifficultTestBtn.style.display = "block";
+  updateMarkDifficultTestButton();
+}
+
+function hideMarkDifficultTestButton() {
+  if (!markDifficultTestBtn) return;
+  markDifficultTestBtn.style.display = "none";
+}
+
+function updateMarkDifficultTestButton() {
+  if (!markDifficultTestBtn || !currentWordObj) return;
+
+  const difficulty = currentWordObj.difficulty || currentDifficulty;
+  const isMarked = isWordMarkedDifficult(currentWordObj, difficulty);
+
+  if (isMarked) {
+    markDifficultTestBtn.textContent = "⭐ Already Marked as Difficult";
+    markDifficultTestBtn.classList.add("marked");
+    markDifficultTestBtn.disabled = true;
+  } else {
+    markDifficultTestBtn.textContent = "⭐ Mark as Difficult";
+    markDifficultTestBtn.classList.remove("marked");
+    markDifficultTestBtn.disabled = false;
+  }
 }
 
 // =============================
@@ -562,9 +636,14 @@ function startQuiz() {
 
   let availableWords = [];
   if (currentDifficulty === "all") {
-    availableWords = [...wordsData.oneBee, ...wordsData.twoBee, ...wordsData.threeBee];
+    // Attach difficulty property to each word
+    const oneBeeWords = wordsData.oneBee.map(w => ({...w, difficulty: "oneBee"}));
+    const twoBeeWords = wordsData.twoBee.map(w => ({...w, difficulty: "twoBee"}));
+    const threeBeeWords = wordsData.threeBee.map(w => ({...w, difficulty: "threeBee"}));
+    availableWords = [...oneBeeWords, ...twoBeeWords, ...threeBeeWords];
   } else {
-    availableWords = wordsData[currentDifficulty];
+    // Attach difficulty property to each word
+    availableWords = wordsData[currentDifficulty].map(w => ({...w, difficulty: currentDifficulty}));
   }
 
   const numQuestions = Math.min(10, availableWords.length);
@@ -748,9 +827,10 @@ function loadStudyWord(indexInGroup) {
     nextStudyWordBtn.disabled = (indexInGroup === studyWords.length - 1);
   }
 
-  // Show "Start Test" button if at the end AND not in review mode
+  // Show "Start Test" button if at the end of study or review phase
   if (startTestBtn) {
-    const showTest = (indexInGroup === studyWords.length - 1) && studyPhase !== "reviewingDifficult";
+    const showTest = (indexInGroup === studyWords.length - 1) &&
+                      (studyPhase === "studying" || studyPhase === "reviewingDifficult");
     startTestBtn.style.display = showTest ? "block" : "none";
   }
 }
@@ -861,6 +941,14 @@ function completeStudyTest() {
 function startReviewDifficultWords() {
   const difficultWords = getAllDifficultWords("all");
 
+  console.log("Starting Review Difficult Words Mode");
+  console.log("Difficult words from storage:", {
+    oneBee: studyProgress.oneBee.difficultWords.length,
+    twoBee: studyProgress.twoBee.difficultWords.length,
+    threeBee: studyProgress.threeBee.difficultWords.length,
+    total: difficultWords.length
+  });
+
   if (difficultWords.length === 0) {
     alert("No difficult words to review yet. Mark words as difficult during study or test phases.");
     return;
@@ -876,7 +964,7 @@ function startReviewDifficultWords() {
 
   console.log("Review Difficult Words:", {
     totalWords: difficultWords.length,
-    words: difficultWords.map(w => w.word)
+    words: difficultWords.map(w => `${w.word} (${w.difficulty})`)
   });
 
   // Show study phase UI
@@ -890,10 +978,8 @@ function startReviewDifficultWords() {
   // Load first word
   loadStudyWord(0);
 
-  // Update button visibility
-  if (startTestBtn) {
-    startTestBtn.style.display = "none"; // No test in review mode for now, user can cycle through
-  }
+  // Note: Test button visibility is managed by loadStudyWord()
+  // It will show when user reaches the last word in the review
 }
 
 function startReviewDifficultTest() {
@@ -913,8 +999,9 @@ function startReviewDifficultTest() {
   totalAttempts = 0;
   studyTestResults = [];
 
-  console.log("Testing Difficult Words:", {
-    totalWords: quizWords.length
+  console.log("Starting Difficult Words Test:", {
+    totalWords: quizWords.length,
+    words: quizWords.map(w => `${w.word} (${w.difficulty})`)
   });
 
   // Show test UI
@@ -923,6 +1010,11 @@ function startReviewDifficultTest() {
   // Update phase indicator
   if (document.getElementById("phaseText")) {
     document.getElementById("phaseText").textContent = "Testing Difficult Words";
+  }
+
+  // Update progress text
+  if (studyProgressText) {
+    studyProgressText.textContent = `Testing all ${quizWords.length} difficult words`;
   }
 
   // Load first test word
@@ -1214,9 +1306,14 @@ checkBtn.addEventListener("click", () => {
     resultText.textContent = `❌ Incorrect. Correct spelling: ${currentWordObj.word}`;
     resultText.className = "result-text incorrect";
 
-    // Auto-mark incorrect words as difficult during testing
-    if (studyPhase === "testing" || studyPhase === "testingDifficult") {
-      markWordAsDifficult(currentWordObj, currentWordObj.difficulty || currentDifficulty);
+    // Auto-mark incorrect words as difficult during testing and in practice/quiz modes
+    if (studyPhase === "testing" || studyPhase === "testingDifficult" || currentMode === "practice" || currentMode === "quiz") {
+      const difficulty = currentWordObj.difficulty || currentDifficulty;
+      console.log("Auto-marking incorrect word:", currentWordObj.word, "Difficulty:", difficulty);
+      const marked = markWordAsDifficult(currentWordObj, difficulty);
+      if (marked) {
+        updateDifficultWordsDisplay(); // Update count immediately
+      }
     }
   }
 
@@ -1245,11 +1342,16 @@ checkBtn.addEventListener("click", () => {
 
   // Show the Next Word button after checking
   showNextWordButton();
+
+  // Show Mark as Difficult button in test phases and practice/quiz modes
+  if (studyPhase === "testing" || studyPhase === "testingDifficult" || currentMode === "practice" || currentMode === "quiz") {
+    showMarkDifficultTestButton();
+  }
 });
 
 nextWordBtn.addEventListener("click", () => {
-  // In quiz mode OR study test mode, continue with quiz words
-  if (currentMode === "quiz" || studyPhase === "testing") {
+  // In quiz mode OR study test mode OR difficult words test mode, continue with quiz words
+  if (currentMode === "quiz" || studyPhase === "testing" || studyPhase === "testingDifficult") {
     quizIndex += 1;
     loadQuizWord();
   } else {
@@ -1338,7 +1440,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (startTestBtn) {
-    startTestBtn.addEventListener("click", startStudyTest);
+    startTestBtn.addEventListener("click", () => {
+      if (studyPhase === "studying") {
+        startStudyTest();
+      } else if (studyPhase === "reviewingDifficult") {
+        startReviewDifficultTest();
+      }
+    });
   }
 
   if (hearStudyWordBtn) {
@@ -1395,6 +1503,26 @@ document.addEventListener("DOMContentLoaded", () => {
             resultText.textContent = "";
           }, 2000);
         }
+      }
+    });
+  }
+
+  // Mark as Difficult button for test phase
+  if (markDifficultTestBtn) {
+    markDifficultTestBtn.addEventListener("click", () => {
+      if (!currentWordObj) return;
+
+      const difficulty = currentWordObj.difficulty || currentDifficulty;
+      console.log("Marking word as difficult:", currentWordObj.word, "Difficulty:", difficulty);
+      const success = markWordAsDifficult(currentWordObj, difficulty);
+
+      if (success) {
+        updateMarkDifficultTestButton();
+        updateDifficultWordsDisplay(); // Update count immediately
+        resultText.textContent = resultText.textContent + " ⭐ Marked as difficult!";
+        resultText.className = "result-text correct";
+      } else {
+        updateMarkDifficultTestButton();
       }
     });
   }
