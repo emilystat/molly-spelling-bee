@@ -1,0 +1,305 @@
+# 2026-2027 School Spelling Bee List for Classroom and Grade Level Bees (Lakeview), transcribed from the school's PDF.
+# Grades 5-7 start with word #1; grade 8 starts with word #151.
+# Format: number <tab> word <tab> accepted alternate spellings (comma-separated) <tab> PDF mark
+# PDF marks: ** = homonym, * = could be confused with a similar word.
+# Note: the PDF prints "propeller OR propeller"; the second spelling is taken to be the variant "propellor".
+1	buttons		
+2	cuddle		*
+3	puffy		*
+4	tiptoed		
+5	clever		
+6	basement		*
+7	burlap		
+8	wetlands		
+9	invite		
+10	butterflies		
+11	kelp		
+12	property		*
+13	carefully		
+14	sniffling		
+15	beneath		
+16	tractor		*
+17	permit		
+18	awning		*
+19	fickle		
+20	relief		*
+21	lunar		*
+22	boycotting		
+23	molten		*
+24	elite		
+25	woven		
+26	proclaim		
+27	thimble		*
+28	custody		
+29	granola		
+30	warrior		*
+31	rigid		*
+32	fierce		*
+33	laughter		
+34	salary		*
+35	disappear		
+36	hurdler		*
+37	lounge		
+38	jovial		
+39	inferior		
+40	December		
+41	duration		
+42	dictionary		
+43	business		
+44	reinstate		
+45	examine		
+46	versus		**
+47	lullaby		
+48	opposite		
+49	tissues		
+50	marlin		
+51	Halloween		
+52	compliment		**
+53	compromise		
+54	incident		
+55	Japanese		
+56	investment		
+57	bifocals		
+58	cutlery		
+59	chisel		
+60	fundraiser		
+61	geologist		
+62	bellowed		*
+63	organism		
+64	quail		
+65	atmosphere		
+66	disappointment		
+67	truant		
+68	pamphlet		
+69	helium		
+70	suggested		
+71	chimpanzees		
+72	desperate		*
+73	annoyance		
+74	interruption		
+75	concentrate		
+76	piñata		
+77	territory		
+78	stragglers		
+79	albino		
+80	ridiculous		
+81	monorail		
+82	exploratory		
+83	indigo		
+84	bratwurst		
+85	alphabetical		
+86	integrity		
+87	Oregon		*
+88	rebuttal		*
+89	prejudice		
+90	solidarity		
+91	calico		
+92	sputnik		
+93	cartridge		
+94	segregation		
+95	tortillas		
+96	civilian		
+97	apprentice		
+98	synthetic		
+99	Caesar		**
+100	fertilizer	fertiliser	
+101	sorceress		
+102	glamorous		
+103	salamanders		
+104	suspension		
+105	singularity		
+106	fictitious		
+107	convertible		
+108	snarkiness		
+109	battalion		
+110	collateral		
+111	initiation		
+112	mascara		
+113	perimeter		*
+114	precedent		*
+115	materialize	materialise	
+116	magnesium		
+117	meticulous		
+118	hypothermia		*
+119	optometrist		
+120	haddock		
+121	cosmodrome		
+122	arthritis		
+123	megahertz		
+124	insurrection		
+125	regolith		
+126	schnauzer		
+127	persnickety	persnickity	
+128	fascism		
+129	pentathletes		
+130	predecessor		
+131	Senegal		
+132	pheasants		*
+133	duende		
+134	conscious		*
+135	reservoir		
+136	carrion		
+137	matrilineal		
+138	Polaroid		
+139	arnica		
+140	elliptical		
+141	piteously		
+142	iridium		*
+143	adrenaline		
+144	glaucoma		
+145	staccato		
+146	rendezvous		
+147	cemetery		*
+148	dachshund		
+149	Aeolus		
+150	romerillo		
+151	newt		*
+152	thrummed		
+153	embankment		
+154	lapels		
+155	generosity		
+156	burnished		
+157	mortar		
+158	unrelenting		
+159	wallowing		*
+160	imperial		*
+161	persistent		*
+162	arsonists		
+163	mewling		**
+164	generator		
+165	dominion		
+166	authority		
+167	panoramic		
+168	doberman		
+169	lemmings		
+170	decisively		
+171	gauntlets		
+172	inanimate		*
+173	frequency		
+174	auditory		*
+175	appetizing		
+176	sentinels		
+177	blithely		*
+178	self-sufficient		
+179	prospective		*
+180	subscription		
+181	tenuous		*
+182	conspicuous		
+183	preconception		
+184	procession		
+185	saxophone		
+186	perpendicular		
+187	hemisphere		
+188	seminal		
+189	canter		**
+190	torrential		
+191	reluctance		
+192	consulate		**
+193	cuisine		
+194	unconscious		
+195	sauntered		
+196	propeller	propellor	
+197	modish		
+198	influenza		
+199	juniper		
+200	settee		
+201	odorant	odourant	
+202	palazzo		
+203	finesse		*
+204	foliage		
+205	irrelevant		
+206	curriculum		
+207	quizzically		
+208	crocheted		
+209	diplomatically		
+210	enigmatic		
+211	increments		
+212	apologetic		
+213	calibrate		
+214	hypothesis		
+215	reassurance		
+216	Delaware		
+217	credenza		
+218	comprehensible		
+219	protectorate		
+220	undulating		
+221	phenomenon		*
+222	trenchant		
+223	pulmonary		
+224	brazier	brasier	
+225	alleviate		
+226	despondent		
+227	approximation		
+228	legation		*
+229	echolocation		
+230	censers		**
+231	phantasmal		
+232	diffidence		*
+233	conflagration		
+234	pathologically		
+235	arachnid		
+236	butane		
+237	thermotaxis		
+238	glycerin	glycerine	*
+239	affinities		
+240	cataract		
+241	inaugurate		
+242	embodiment		
+243	quiche		
+244	bioluminescence		
+245	alabaster		
+246	porpoises		*
+247	euphemism		
+248	chickadee	chicadee	
+249	arugula		
+250	psychological		
+251	acolyte		
+252	asymmetric		*
+253	vibrometer		
+254	assemblage		
+255	innocuous		*
+256	shar-pei		
+257	mayonnaise		
+258	leprosy		
+259	Tripoli		**
+260	endothermy		
+261	sputum		
+262	eureka		
+263	neurological		
+264	éclair		
+265	cerulean		
+266	annelids		*
+267	mysticetes		
+268	irascibility		**
+269	cul-de-sac		*
+270	kerosene	kerosine	
+271	Eritrea		
+272	a cappella	a capella	
+273	electrolytes		*
+274	forsythia		
+275	Amharic		
+276	ototoxic		*
+277	Pennsylvania		
+278	salicylic acid		
+279	Gloucester		
+280	ampulla		
+281	Aphrodite		
+282	stomatopods		
+283	bogong moth		
+284	sensilla		
+285	frankincense		
+286	prosciutto		
+287	chitinous		
+288	yakuza		
+289	eponymous		*
+290	solenodon		
+291	trichobothria		
+292	Krio		*
+293	Presbyterian		
+294	lactobacillus		
+295	Cappadocia		
+296	Addis Ababa		
+297	Sierra Leone		
+298	vibrissae		
+299	Bildungsroman		
+300	spes phthisica		
