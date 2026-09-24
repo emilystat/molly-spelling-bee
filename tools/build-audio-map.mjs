@@ -23,6 +23,17 @@ const AUDIO_FILE_RE = /\.(ogg|oga|opus|wav|mp3|flac|webm)$/i;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const stripHtml = (s) => String(s || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
 
+// "Speaker: X Recorder: X" -> "X"; drops Commons' "No machine-readable author provided ... assumed" wording.
+function cleanAuthor(text) {
+  const s = stripHtml(text)
+    .replace(/^No machine-readable author provided\.\s*/i, "")
+    .replace(/\s*assumed \(based on copyright claims\)\.?$/i, "")
+    .trim();
+  const m = s.match(/^Speaker:\s*(.+?)\s+Recorder:\s*(.+)$/i);
+  if (!m) return s;
+  return m[1] === m[2] ? m[1] : `${m[1]} (recorded by ${m[2]})`;
+}
+
 async function api(base, params) {
   const url = `${base}?${new URLSearchParams({ format: "json", formatversion: "2", ...params })}`;
   for (let attempt = 1; attempt <= 8; attempt++) {
@@ -86,7 +97,7 @@ async function fileInfo(titles) {
       info.set(renamed.get(page.title) || page.title, {
         url: ii.url,
         page: ii.descriptionurl,
-        author: stripHtml(ii.extmetadata?.Artist?.value),
+        author: cleanAuthor(ii.extmetadata?.Artist?.value),
         license: stripHtml(ii.extmetadata?.LicenseShortName?.value)
       });
     }
