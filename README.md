@@ -1,17 +1,27 @@
 # Spelling Bee Practice Website
 
-A web-based spelling practice tool designed for 6th grade students, featuring multiple practice modes, difficulty levels, and progress tracking.
+A web-based spelling practice tool for the school spelling bee, featuring multiple practice modes, real-voice pronunciations, study cards with word parts, and spaced review tests.
+
+## Word Lists
+
+- **2026–27 School List (default)**: the 300 words of the *2026-2027 School Spelling Bee List for Classroom and Grade Level Bees*, in the school's order. These are the same words as the Scripps 2027 School Spelling Bee Study List: #1–150 are "Two Bee" words (grades 5–7 start at #1) and #151–300 are "Three Bee" words (grade 8 starts at #151). The list is split into six sets of 50.
+- **2025–26 School List**: last year's 450 words (One Bee, Two Bee, Three Bee). Progress saved last year is kept.
+
+Switch lists with the **Word list** menu. Study progress is saved separately for each list.
 
 ## Features
 
 - **Practice Mode**: Free practice with unlimited words
 - **Quiz Mode**: Test yourself with 10 random words
-- **Study Mode**: Structured learning with 10-word groups and test phases
-- **Review Difficult Words**: Focus on words you've marked as challenging
-- **Difficulty Levels**: Three levels (One Bee, Two Bee, Three Bee)
-- **Progress Tracking**: Track your study progress across multiple sessions
-- **Audio Pronunciation**: Hear words spoken aloud
-- **Hints**: Get helpful clues when needed
+- **Study Mode**: Study 10 words at a time on word cards, then take a test
+- **Review Tests**: Each studied group comes back for a review test the next day; good scores push the next review further out (1, 3, 7, 14, 30 days)
+- **Review Difficult Words**: Focus on words you've missed or marked as challenging
+- **Ask the Pronouncer**: Like a real bee, ask for the definition, a sentence (with the word blanked out), the part of speech, the language of origin, or a root hint
+- **Word Cards**: Definition, example sentence, "sounds like" respelling, language of origin, word parts (prefixes, roots, suffixes), spelling tips, homonym warnings, and a link to Merriam-Webster
+- **Real-Voice Pronunciation**: Recordings of real people from Wikimedia Commons when available, otherwise the best computer voice on the device (voice and speed can be changed; 🐢 Slow plays the word slower)
+- **Bee Countdown**: Days until the next school bee and a suggested number of new words per day
+- **Answer Checking**: Capital letters and accents are optional (piñata = pinata), alternate spellings on the list are accepted (fertilizer/fertiliser), hyphens and spaces count (cul-de-sac)
+- **More Practice**: Links to the Hoover 206 study/test slideshows, Merriam-Webster, and the free Scripps Word Club app
 
 ## Usage
 
@@ -20,11 +30,22 @@ Simply open `index.html` in a web browser to start practicing. Your progress is 
 ## Files
 
 - `index.html` - Main application interface
-- `script.js` - Application logic and study mode functionality
+- `script.js` - Application logic (practice, quiz, study mode, review tests, word cards)
+- `audio.js` - Pronunciation: real recordings with a computer-voice fallback
 - `style.css` - Styling and layout
-- `words-data.js` - Complete word database with definitions and example sentences
-- `words-raw.js` - Raw word lists by difficulty level
-- `fetch-definitions.html` - Utility tool for fetching word definitions from dictionary API
+- `word-lists.js` - The word lists, their sets, bee dates, and resource links
+- `words-2026-27.js` - 2026–27 words with definitions, sentences, origins, word parts and tips
+- `words-data.js` - 2025–26 words with definitions and example sentences
+- `audio-map.js` - Recordings found for each word (generated)
+- `tools/school-list-2026-27.txt` - The school's list, transcribed from the PDF
+- `tools/validate-words.mjs` - Checks `words-2026-27.js` against the school's list: `node tools/validate-words.mjs`
+- `tools/build-audio-map.mjs` - Finds a real recording for every word and rebuilds `audio-map.js`: `node tools/build-audio-map.mjs` (needs Node 22+ and internet access)
+
+## Credits
+
+- Definitions, example sentences, word-part notes and tips for the 2026–27 list were written for this site.
+- Pronunciation recordings come from [Wikimedia Commons](https://commons.wikimedia.org/) (the recordings Wiktionary uses, including [Lingua Libre](https://lingualibre.org/) volunteers). Each word card links to its recording and credits the speaker and license.
+- The study → wait a day → test again approach and the "Ask the pronouncer" test style were inspired by the [Hoover 206 spelling site](https://hoover206.wixsite.com/spelling), which the site links to for extra practice.
 
 ## Copyright and License
 
@@ -45,7 +66,7 @@ See the [LICENSE](LICENSE) file for full license text.
 
 ## Disclaimer
 
-This is an educational project created for personal use. Word definitions are sourced from public APIs and may not be suitable for all contexts.
+This is an educational project created for personal use. Definitions for the 2025–26 list are sourced from public APIs and may not be suitable for all contexts. Recordings are from volunteers and may use different accents; check [Merriam-Webster](https://www.merriam-webster.com/) (the school's pronunciation guide) when in doubt.
 
 ---
 
