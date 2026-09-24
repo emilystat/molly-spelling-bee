@@ -499,7 +499,7 @@ function renderWordDetails(wordObj, { withAudioCredit = false } = {}) {
   }
   if (wordObj.tip) html.push(`<p class="wd-tip">💡 ${escapeHtml(wordObj.tip)}</p>`);
   if (wordObj.confuse) {
-    const label = wordObj.flag === "homonym" ? "Homonym" : "Don't mix it up";
+    const label = wordObj.flag === "homonym" ? "Homonym" : "Watch out";
     html.push(`<p class="wd-confuse">⚠️ <strong>${label}:</strong> ${escapeHtml(wordObj.confuse)}</p>`);
   }
   if (wordObj.alts && wordObj.alts.length) {
