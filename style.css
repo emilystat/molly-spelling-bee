@@ -880,3 +880,431 @@ footer {
 .progress-item {
   position: relative;
 }
+
+/* =============================
+   Word List, Voice Settings & Resources
+   ============================= */
+
+.list-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.list-row label {
+  font-weight: 600;
+}
+
+.list-row select {
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  max-width: 100%;
+}
+
+.settings-panel,
+.resources-panel {
+  margin-bottom: 1rem;
+  border: 1px solid #ffe082;
+  border-radius: 12px;
+  background: #fffef7;
+}
+
+.settings-panel summary,
+.resources-panel summary {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.settings-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.75rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.settings-body select {
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  max-width: 100%;
+}
+
+.settings-body input[type="range"] {
+  width: 100%;
+  accent-color: #ff9800;
+}
+
+.settings-body button {
+  align-self: flex-start;
+}
+
+.settings-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.settings-note {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.resources-panel {
+  margin: 1rem 0 0;
+}
+
+#resourcesBody {
+  padding: 0 0.9rem 0.75rem;
+  font-size: 0.88rem;
+}
+
+#resourcesBody h4 {
+  margin: 0.6rem 0 0.3rem;
+  font-size: 0.88rem;
+  color: #444;
+}
+
+#resourcesBody ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.resource-sets li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.resource-sets li span {
+  min-width: 4.5rem;
+  font-weight: 600;
+}
+
+#resourcesBody a,
+.word-details a,
+.audio-badge a {
+  color: #1565c0;
+}
+
+/* =============================
+   Audio Buttons & Badges
+   ============================= */
+
+.slow-btn {
+  background: #7e57c2;
+  color: white;
+}
+
+.slow-btn:hover {
+  background: #673ab7;
+}
+
+.sentence-btn {
+  background: #26a69a;
+  color: white;
+}
+
+.sentence-btn:hover {
+  background: #00897b;
+}
+
+.study-audio-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.study-audio-buttons button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.audio-badge {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.word-controls .audio-badge {
+  align-self: center;
+}
+
+#studyAudioBadge {
+  margin-top: 0.5rem;
+  min-height: 1.2em;
+}
+
+/* =============================
+   Word Details (study card and answer reveal)
+   ============================= */
+
+.info-message {
+  color: #444;
+}
+
+.word-details {
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.word-details p,
+.word-details .wd-parts {
+  margin-bottom: 0.55rem;
+}
+
+.word-details p:last-child {
+  margin-bottom: 0;
+}
+
+.word-details strong {
+  color: #555;
+}
+
+.wd-meta {
+  font-style: italic;
+  color: #6d4c41;
+}
+
+.wd-sounds strong {
+  color: #222;
+  letter-spacing: 0.02em;
+}
+
+.word-details mark {
+  background: #fff176;
+  padding: 0 0.15em;
+  border-radius: 3px;
+}
+
+.wd-parts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.part-chip {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.85rem;
+}
+
+.part-chip b {
+  color: #0d47a1;
+}
+
+.part-plus {
+  color: #999;
+  font-weight: 700;
+}
+
+.wd-tip {
+  background: #f1f8e9;
+  border-left: 4px solid #8bc34a;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+}
+
+.wd-confuse {
+  background: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+}
+
+.wd-alts {
+  color: #555;
+}
+
+.wd-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+/* =============================
+   Ask the Pronouncer
+   ============================= */
+
+.pronouncer-panel {
+  background: #e8f5e9;
+  border: 1px dashed #66bb6a;
+  border-radius: 12px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pronouncer-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #2e7d32;
+  margin-bottom: 0.4rem;
+}
+
+.pronouncer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pronouncer-buttons button {
+  background: white;
+  border: 1px solid #66bb6a;
+  color: #1b5e20;
+  font-size: 0.82rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.pronouncer-buttons button:hover {
+  background: #c8e6c9;
+}
+
+.pronouncer-buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pronouncer-answers p {
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.pronouncer-answers strong {
+  color: #2e7d32;
+}
+
+.blank {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* =============================
+   Dashboard: Countdown, Grade & Review Tests
+   ============================= */
+
+.bee-countdown {
+  background: linear-gradient(135deg, #fff59d, #ffe082);
+  border: 2px solid #ffb300;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.countdown-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.countdown-dates {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.countdown-pace {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.grade-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.grade-row label {
+  font-weight: 600;
+}
+
+.grade-row select {
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.due-reviews {
+  background: #e3f2fd;
+  border: 2px solid #64b5f6;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.due-reviews h4 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.due-note {
+  font-size: 0.88rem;
+  color: #444;
+}
+
+.due-list {
+  list-style: none;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.due-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+.review-test-btn {
+  background: #2196f3;
+  color: white;
+  font-size: 0.85rem;
+}
+
+.review-test-btn:hover {
+  background: #1976d2;
+}
+
+.set-tier {
+  display: block;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .bee-countdown {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .due-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

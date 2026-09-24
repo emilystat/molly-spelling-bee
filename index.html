@@ -11,6 +11,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Spelling Bee Practice</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -19,12 +20,17 @@
     <div class="bee-logo">🐝</div>
     <div>
       <h1>Spelling Bee Practice</h1>
-      <p>6th Grade Word Practice</p>
+      <p id="headerSubtitle">School Spelling Bee Practice</p>
     </div>
   </header>
 
   <main>
     <section class="card">
+      <div class="list-row">
+        <label for="listSelect">Word list:</label>
+        <select id="listSelect"></select>
+      </div>
+
       <div class="mode-row">
         <label for="modeSelect">Mode:</label>
         <select id="modeSelect">
@@ -37,19 +43,35 @@
       </div>
 
       <div class="difficulty-filter">
-        <label for="difficultySelect">Difficulty:</label>
+        <label for="difficultySelect">Word set:</label>
         <select id="difficultySelect">
           <option value="all">All Words</option>
-          <option value="oneBee">One Bee (Easy) 🐝</option>
-          <option value="twoBee">Two Bee (Medium) 🐝🐝</option>
-          <option value="threeBee">Three Bee (Hard) 🐝🐝🐝</option>
         </select>
       </div>
+
+      <details class="settings-panel">
+        <summary>⚙️ Voice &amp; sound</summary>
+        <div class="settings-body">
+          <label class="settings-check">
+            <input type="checkbox" id="useRecordingsToggle" />
+            Use real recordings of people saying the word, when there is one
+          </label>
+          <label for="voiceSelect">Computer voice (used when there is no recording):</label>
+          <select id="voiceSelect"></select>
+          <label for="rateInput">Speaking speed: <span id="rateValue"></span></label>
+          <input id="rateInput" type="range" min="0.5" max="1.2" step="0.05" />
+          <button id="testVoiceBtn" type="button">▶️ Test computer voice</button>
+          <p class="settings-note">
+            Tip: the free <a href="https://spellingbee.com/word-club" target="_blank" rel="noopener">Word Club app</a>
+            has every school word recorded by the official Scripps pronouncer.
+          </p>
+        </div>
+      </details>
 
       <div id="studyPhaseIndicator" class="study-phase-indicator" style="display: none;">
         <div class="phase-badge">
           <span id="phaseText">Study Phase</span>
-          <span id="studyProgressText">Group 1/15 • Word 1/10</span>
+          <span id="studyProgressText">Group 1/5 • Word 1/10</span>
         </div>
       </div>
 
@@ -62,19 +84,35 @@
       <div id="studyCard" class="study-card" style="display: none;">
         <div class="study-word-display">
           <h2 id="studyWordText"></h2>
-          <button id="hearStudyWordBtn">🔊 Hear Word</button>
+          <div class="study-audio-buttons">
+            <button id="hearStudyWordBtn">🔊 Hear Word</button>
+            <button id="slowStudyWordBtn" class="slow-btn">🐢 Slow</button>
+            <button id="sayStudySentenceBtn" class="sentence-btn">🗣️ Sentence</button>
+          </div>
+          <p id="studyAudioBadge" class="audio-badge"></p>
           <button id="markDifficultBtn" class="mark-difficult-btn">⭐ Mark Difficult</button>
         </div>
-        <div class="study-info">
-          <p><strong>Definition:</strong> <span id="studyDefinition"></span></p>
-          <p><strong>Sentence:</strong> <span id="studySentence"></span></p>
-        </div>
+        <div id="studyDetails" class="study-info word-details"></div>
       </div>
 
       <div class="word-controls">
         <button id="playWordBtn">🐝 Play Word</button>
         <button id="repeatBtn">🔁 Repeat</button>
+        <button id="slowBtn" class="slow-btn">🐢 Slow</button>
         <button id="hintBtn">💡 Hint</button>
+        <span id="testAudioBadge" class="audio-badge"></span>
+      </div>
+
+      <div id="pronouncerPanel" class="pronouncer-panel" style="display: none;">
+        <span class="pronouncer-label">Ask the pronouncer:</span>
+        <div class="pronouncer-buttons">
+          <button data-ask="definition">📖 Definition</button>
+          <button data-ask="sentence">🗣️ Sentence</button>
+          <button data-ask="pos">🏷️ Part of speech</button>
+          <button data-ask="origin">🌍 Origin</button>
+          <button data-ask="parts">🧩 Root hint</button>
+        </div>
+        <div id="pronouncerAnswers" class="pronouncer-answers"></div>
       </div>
 
       <div class="input-row">
@@ -82,6 +120,9 @@
           id="answerInput"
           type="text"
           autocomplete="off"
+          autocapitalize="off"
+          autocorrect="off"
+          spellcheck="false"
           placeholder="Type the spelling here"
         />
         <button id="checkBtn">Check</button>
@@ -96,14 +137,8 @@
       <button id="nextWordBtn" style="display: none;">➡️ Next Word</button>
 
       <div class="info">
-        <p>
-          <strong>Definition:</strong>
-          <span id="definitionText">Click “Play Word” to begin.</span>
-        </p>
-        <p>
-          <strong>Sentence:</strong>
-          <span id="sentenceText"></span>
-        </p>
+        <p id="infoMessage" class="info-message">Click “Play Word” to begin.</p>
+        <div id="wordDetails" class="word-details" style="display: none;"></div>
       </div>
 
       <div class="score-row">
@@ -115,6 +150,15 @@
         <div class="dashboard-header">
           <h3>Study Progress</h3>
         </div>
+
+        <div id="beeCountdown" class="bee-countdown" style="display: none;"></div>
+
+        <div id="gradeRow" class="grade-row" style="display: none;">
+          <label for="gradeSelect">My grade:</label>
+          <select id="gradeSelect"></select>
+        </div>
+
+        <div id="dueReviews" class="due-reviews"></div>
 
         <div id="difficultWordsSummary" class="difficult-words-summary">
           <div class="summary-header">
@@ -136,6 +180,11 @@
           <button id="resetAllBtn" class="reset-all-btn">🔄 Reset All Progress</button>
         </div>
       </div>
+
+      <details id="resourcesPanel" class="resources-panel">
+        <summary>📚 More practice &amp; resources</summary>
+        <div id="resourcesBody"></div>
+      </details>
     </section>
 
     <!-- Reset Confirmation Modal -->
@@ -161,12 +210,9 @@
         </div>
         <div class="modal-body">
           <div class="difficult-words-filter">
-            <label>Filter by:</label>
+            <label for="difficultWordsFilter">Filter by:</label>
             <select id="difficultWordsFilter">
-              <option value="all">All Difficulties</option>
-              <option value="oneBee">One Bee 🐝</option>
-              <option value="twoBee">Two Bee 🐝🐝</option>
-              <option value="threeBee">Three Bee 🐝🐝🐝</option>
+              <option value="all">All Sets</option>
             </select>
             <button id="clearAllDifficultBtn" class="btn-danger-small">Clear All</button>
           </div>
@@ -180,10 +226,19 @@
 
   <footer>
     Spelling Bee Practice &middot; Made with 🐝 for Molly<br>
+    <small>
+      Definitions, sentences and word-part notes written for this site &middot;
+      Recordings from Wikimedia Commons (credited on each word) &middot;
+      Study-and-test ideas from the <a href="https://hoover206.wixsite.com/spelling" target="_blank" rel="noopener" style="color: inherit;">Hoover 206 spelling site</a>
+    </small><br>
     <small>&copy; 2026 Emily &middot; Licensed under <a href="LICENSE" style="color: inherit;">CC BY-NC-SA 4.0</a></small>
   </footer>
 
   <script src="words-data.js"></script>
+  <script src="words-2026-27.js"></script>
+  <script src="word-lists.js"></script>
+  <script src="audio-map.js"></script>
+  <script src="audio.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
