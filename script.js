@@ -35,6 +35,7 @@ let studyWords = []; // Current 10 words for study
 let studyProgress = null; // Loaded from localStorage
 let studyTestResults = []; // Track test performance
 let reviewTarget = null; // { setKey, groupIndex } during a scheduled review test
+let recentPracticeWords = []; // words asked recently this session, so Practice doesn't repeat them
 
 // DOM elements
 const listSelect = document.getElementById("listSelect");
@@ -74,7 +75,6 @@ let studyDetails = null;
 let studyDashboard = null;
 let progressBars = null;
 let continueStudyBtn = null;
-let bookmarkBtn = null;
 
 // =============================
 //  Helpers
@@ -267,6 +267,16 @@ function getGradeSetKeys() {
   return grade ? grade.setKeys : getSetKeys();
 }
 
+function isSetFinished(key) {
+  return studyProgress[key].completedGroups.length >= studyProgress[key].totalGroups;
+}
+
+// Next set with groups left: the current set, then the grade's sets, then the rest of the list
+function getNextUnfinishedSet() {
+  const order = [currentDifficulty, ...getGradeSetKeys(), ...getSetKeys()].filter(k => getSet(k));
+  return order.find(k => !isSetFinished(k)) || null;
+}
+
 // First set for the grade that still has groups left to study
 function getDefaultStudySet() {
   const keys = getGradeSetKeys();
@@ -406,6 +416,61 @@ function showPracticeUI() {
   document.querySelector(".info").style.display = "block";
 }
 
+// =============================
+//  Choosing Words (no needless repeats)
+// =============================
+// Every answer is remembered per word. New words come first, then words that still
+// need work (missed and not yet right twice in a row), then the ones practiced longest ago.
+
+const MASTERED_STREAK = 2; // correct answers in a row that count as "got it"
+
+function wordKey(wordObj) {
+  return wordObj.word.toLowerCase();
+}
+
+function getWordStat(wordObj) {
+  return (studyProgress.wordStats || {})[wordKey(wordObj)] || null;
+}
+
+function recordAnswer(wordObj, isCorrect) {
+  if (!studyProgress.wordStats) studyProgress.wordStats = {};
+  const stat = getWordStat(wordObj) || { seen: 0, correct: 0, wrong: 0, streak: 0, last: 0 };
+  stat.seen += 1;
+  if (isCorrect) {
+    stat.correct += 1;
+    stat.streak += 1;
+  } else {
+    stat.wrong += 1;
+    stat.streak = 0;
+  }
+  stat.last = Date.now();
+  studyProgress.wordStats[wordKey(wordObj)] = stat;
+  saveStudyProgress();
+}
+
+// 0 = never answered, 1 = still needs work, 2 = got it
+function wordPriority(wordObj) {
+  const stat = getWordStat(wordObj);
+  if (!stat) return 0;
+  if (stat.wrong > 0 && stat.streak < MASTERED_STREAK) return 1;
+  return 2;
+}
+
+// Up to `count` words to ask next, skipping words in `avoid` unless there aren't enough others
+function pickNextWords(words, count, avoid = []) {
+  const avoidSet = new Set(avoid.map(w => w.toLowerCase()));
+  const order = shuffleArray(words)
+    .map(w => ({ w, priority: wordPriority(w), last: (getWordStat(w) || {}).last || 0 }))
+    .sort((a, b) => a.priority - b.priority || a.last - b.last)
+    .map(x => x.w);
+  const fresh = order.filter(w => !avoidSet.has(wordKey(w)));
+  return fresh.concat(order.filter(w => avoidSet.has(wordKey(w)))).slice(0, count);
+}
+
+function countPracticed(words) {
+  return words.filter(w => getWordStat(w)).length;
+}
+
 function pickRandomWord() {
   const availableWords = getSelectedWords();
 
@@ -414,8 +479,12 @@ function pickRandomWord() {
     return null;
   }
 
-  const idx = Math.floor(Math.random() * availableWords.length);
-  return availableWords[idx];
+  // Don't repeat the most recent words (up to half the set) in this session
+  const avoid = recentPracticeWords.slice(-Math.floor(availableWords.length / 2));
+  const wordObj = pickNextWords(availableWords, 1, avoid)[0];
+  recentPracticeWords.push(wordObj.word);
+  if (recentPracticeWords.length > 200) recentPracticeWords.shift();
+  return wordObj;
 }
 
 // =============================
@@ -660,7 +729,7 @@ function createSetProgress(key) {
 }
 
 function initializeStudyProgress() {
-  const progress = { globalSettings: {} };
+  const progress = { globalSettings: {}, wordStats: {} };
   getSetKeys().forEach(key => {
     progress[key] = createSetProgress(key);
   });
@@ -677,6 +746,7 @@ function completeStudyProgress() {
     if (!progress.groupReviews) progress.groupReviews = {};
   });
   if (!studyProgress.globalSettings) studyProgress.globalSettings = {};
+  if (!studyProgress.wordStats) studyProgress.wordStats = {};
 }
 
 function loadStudyProgress() {
@@ -750,8 +820,12 @@ function markGroupComplete(difficulty, groupIndex) {
   saveStudyProgress();
 }
 
+// The first group in the set that hasn't been studied and tested yet
 function getNextStudyGroup(difficulty) {
   const progress = studyProgress[difficulty];
+  for (let g = 0; g < progress.totalGroups; g++) {
+    if (!progress.completedGroups.includes(g)) return g;
+  }
   return progress.currentGroup;
 }
 
@@ -1059,18 +1133,28 @@ function clearAllDifficultWords(filterDifficulty = "all") {
   saveStudyProgress();
 }
 
-function updateDifficultWordReview(word, difficulty) {
-  if (!studyProgress[difficulty] || !studyProgress[difficulty].difficultWords) return;
+// After answering a word that is on the difficult list: count the review, and remove the
+// word once it has been spelled right MASTERED_STREAK times in a row. Returns true if removed.
+function updateDifficultWordProgress(wordObj, isCorrect) {
+  const difficulty = wordObj.difficulty || currentDifficulty;
+  if (!studyProgress[difficulty] || !studyProgress[difficulty].difficultWords) return false;
 
   const wordData = studyProgress[difficulty].difficultWords.find(
-    w => w.word.toLowerCase() === word.toLowerCase()
+    w => w.word.toLowerCase() === wordObj.word.toLowerCase()
   );
+  if (!wordData) return false;
 
-  if (wordData) {
-    wordData.reviewCount += 1;
-    wordData.lastReviewDate = todayString();
-    saveStudyProgress();
+  wordData.reviewCount = (wordData.reviewCount || 0) + 1;
+  wordData.lastReviewDate = todayString();
+  wordData.correctStreak = isCorrect ? (wordData.correctStreak || 0) + 1 : 0;
+  saveStudyProgress();
+
+  if (wordData.correctStreak >= MASTERED_STREAK) {
+    unmarkWordAsDifficult(wordObj.word, difficulty);
+    updateDifficultWordsDisplay();
+    return true;
   }
+  return false;
 }
 
 function setCurrentWord(wordObj) {
@@ -1093,6 +1177,9 @@ function updateScoreDisplay() {
   scoreText.textContent = `Score: ${correctCount} / ${totalAttempts}`;
   if ((currentMode === "quiz" || isTestPhase()) && quizWords.length > 0) {
     progressText.textContent = `Question ${Math.min(quizIndex + 1, quizWords.length)} of ${quizWords.length}`;
+  } else if (currentMode === "practice" && studyPhase === "none" && studyProgress) {
+    const words = getSelectedWords();
+    progressText.textContent = `Practiced ${countPracticed(words)} of ${words.length} words`;
   } else {
     progressText.textContent = "";
   }
@@ -1179,7 +1266,7 @@ function startQuiz() {
 
   const availableWords = getSelectedWords();
   const numQuestions = Math.min(10, availableWords.length);
-  quizWords = shuffleArray(availableWords).slice(0, numQuestions);
+  quizWords = shuffleArray(pickNextWords(availableWords, numQuestions));
   quizIndex = 0;
   correctCount = 0;
   totalAttempts = 0;
@@ -1231,7 +1318,6 @@ function initializeStudyModeDOM() {
   studyDashboard = document.getElementById("studyDashboard");
   progressBars = document.getElementById("progressBars");
   continueStudyBtn = document.getElementById("continueStudyBtn");
-  bookmarkBtn = document.getElementById("bookmarkBtn");
 }
 
 function startStudyMode() {
@@ -1474,9 +1560,20 @@ function completeStudyTest() {
 //  Review Difficult Words Mode
 // =============================
 
+const DIFFICULT_REVIEW_SIZE = 10;
+
+// The difficult words to review next: least progress first, oldest first, at most 10
+function nextDifficultWords() {
+  return getAllDifficultWords("all")
+    .slice()
+    .sort((a, b) => (a.correctStreak || 0) - (b.correctStreak || 0) || String(a.lastReviewDate || "").localeCompare(String(b.lastReviewDate || "")))
+    .slice(0, DIFFICULT_REVIEW_SIZE)
+    .map(hydrateWord);
+}
+
 function startReviewDifficultWords() {
   cancelTransition();
-  const difficultWords = getAllDifficultWords("all").map(hydrateWord);
+  const difficultWords = nextDifficultWords();
 
   console.log("Starting Review Difficult Words Mode:", {
     total: difficultWords.length,
@@ -1493,7 +1590,7 @@ function startReviewDifficultWords() {
   studyGroupIndex = 0;
   studyCurrentWordIndex = 0;
 
-  // Use all difficult words as study words
+  // Review up to 10 difficult words at a time
   studyWords = difficultWords;
   BeeAudio.prefetch(studyWords);
 
@@ -1511,7 +1608,8 @@ function startReviewDifficultWords() {
 }
 
 function startReviewDifficultTest() {
-  const difficultWords = getAllDifficultWords("all").map(hydrateWord);
+  // Test the same words that were just reviewed
+  const difficultWords = studyWords.slice();
 
   if (difficultWords.length === 0) {
     alert("No difficult words to test.");
@@ -1540,7 +1638,7 @@ function startReviewDifficultTest() {
 
   // Update progress text
   if (studyProgressText) {
-    studyProgressText.textContent = `Testing all ${quizWords.length} difficult words`;
+    studyProgressText.textContent = `Testing ${quizWords.length} difficult words`;
   }
 
   // Load first test word
@@ -1555,7 +1653,12 @@ function completeReviewDifficultTest() {
   resultText.textContent = `Test complete! You scored ${score} out of ${total}.`;
   resultText.className = "result-text correct";
 
-  setInfoMessage("Great job reviewing your difficult words!", "Words you got correct will remain in your difficult list. Keep practicing!");
+  const mastered = studyTestResults.filter(r => r.mastered).length;
+  const left = getDifficultWordsCount();
+  setInfoMessage(
+    mastered ? `🎉 ${mastered} word${mastered === 1 ? "" : "s"} mastered and removed from your difficult list!` : "Great job reviewing your difficult words!",
+    `A word leaves the list after you spell it right ${MASTERED_STREAK} times in a row. ${left} difficult word${left === 1 ? "" : "s"} left.`
+  );
 
   progressText.textContent = "";
   hideNextWordButton();
@@ -1779,7 +1882,7 @@ function renderProgressDashboard() {
       <div class="progress-item">
         <div class="progress-header">
           <span class="difficulty-label">${escapeHtml(set.label)}${set.tier ? ` <small class="set-tier">${escapeHtml(set.tier)}</small>` : ""}</span>
-          <span class="progress-stats">${completed}/${total} groups</span>
+          <span class="progress-stats">${completed}/${total} groups · ${countPracticed(set.words)}/${set.words.length} words practiced</span>
         </div>
         <div class="progress-bar-container">
           <div class="progress-bar-fill" style="width: ${percentage}%"></div>
@@ -1792,66 +1895,21 @@ function renderProgressDashboard() {
   progressBars.innerHTML = html;
 
   // Update dashboard message
-  const studySet = currentDifficulty !== "all" ? currentDifficulty : getDefaultStudySet();
-  const currentProgress = studyProgress[studySet];
-  const nextGroup = currentProgress.currentGroup;
-  const totalGroups = currentProgress.totalGroups;
+  // Same choice the Continue Studying button makes
+  const chosen = currentDifficulty !== "all" ? currentDifficulty : getDefaultStudySet();
+  const studySet = isSetFinished(chosen) ? getNextUnfinishedSet() : chosen;
 
-  if (currentProgress.completedGroups.length < totalGroups && nextGroup < totalGroups) {
-    resultText.textContent = `Ready to study! Next up: ${getSetLabel(studySet)} · Group ${nextGroup + 1} of ${totalGroups}`;
+  if (studySet) {
+    const totalGroups = studyProgress[studySet].totalGroups;
+    const finishedNote = studySet !== chosen ? `${getSetLabel(chosen)} is done! 🎉 ` : "";
+    resultText.textContent = `${finishedNote}Ready to study! Next up: ${getSetLabel(studySet)} · Group ${getNextStudyGroup(studySet) + 1} of ${totalGroups}`;
     resultText.className = "result-text";
   } else {
-    resultText.textContent = `All groups completed for ${getSetLabel(studySet)}! 🎉`;
+    resultText.textContent = "You've studied every group in this list! 🎉 Keep up the review tests.";
     resultText.className = "result-text correct";
   }
 
   setInfoMessage("Pick a word set and click “Continue Studying” to begin.");
-}
-
-// =============================
-//  Bookmark Functions
-// =============================
-
-function createBookmark() {
-  if (studyPhase !== "studying") {
-    alert("You can only bookmark during study phase.");
-    return;
-  }
-
-  const groupNum = studyGroupIndex + 1;
-  const totalGroups = studyProgress[currentDifficulty].totalGroups;
-
-  studyProgress[currentDifficulty].bookmark = {
-    groupIndex: studyGroupIndex,
-    description: `Group ${groupNum}/${totalGroups}: words ${studyGroupIndex * 10 + 1}-${studyGroupIndex * 10 + studyWords.length}`
-  };
-
-  saveStudyProgress();
-
-  resultText.textContent = `📌 Bookmarked! Group ${groupNum} saved for later.`;
-  resultText.className = "result-text correct";
-
-  setTimeout(() => {
-    resultText.textContent = "";
-  }, 2000);
-}
-
-function resumeFromBookmark() {
-  const bookmark = studyProgress[currentDifficulty].bookmark;
-
-  if (!bookmark) {
-    alert("No bookmark found for this word set.");
-    return;
-  }
-
-  startStudyGroup(bookmark.groupIndex);
-}
-
-function clearBookmark(difficulty) {
-  if (studyProgress[difficulty]) {
-    studyProgress[difficulty].bookmark = null;
-    saveStudyProgress();
-  }
 }
 
 // =============================
@@ -1902,6 +1960,8 @@ checkBtn.addEventListener("click", () => {
   currentWordAnswered = true;
   totalAttempts += 1;
   const isCorrect = isCorrectSpelling(userAnswer, currentWordObj);
+  recordAnswer(currentWordObj, isCorrect);
+  const mastered = updateDifficultWordProgress(currentWordObj, isCorrect);
 
   if (isCorrect) {
     correctCount += 1;
@@ -1912,7 +1972,8 @@ checkBtn.addEventListener("click", () => {
     const altsNote = currentWordObj.alts && currentWordObj.alts.length
       ? ` Accepted spellings: ${formatAcceptedSpellings(currentWordObj)}.`
       : "";
-    resultText.textContent = `✅ Correct!${accentNote}${altsNote}`;
+    const masteredNote = mastered ? " 🎉 Mastered! Removed from your difficult words." : "";
+    resultText.textContent = `✅ Correct!${accentNote}${altsNote}${masteredNote}`;
     resultText.className = "result-text correct";
   } else {
     resultText.textContent = `❌ Incorrect. Correct spelling: ${formatAcceptedSpellings(currentWordObj)}`;
@@ -1934,7 +1995,8 @@ checkBtn.addEventListener("click", () => {
     studyTestResults.push({
       word: currentWordObj.word,
       correct: isCorrect,
-      userAnswer: userAnswer
+      userAnswer: userAnswer,
+      mastered: mastered
     });
   }
 
@@ -2094,17 +2156,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (continueStudyBtn) {
     continueStudyBtn.addEventListener("click", () => {
-      if (currentDifficulty === "all") {
-        currentDifficulty = getDefaultStudySet();
+      if (currentDifficulty === "all" || isSetFinished(currentDifficulty)) {
+        const nextSet = getNextUnfinishedSet();
+        if (!nextSet) {
+          resultText.textContent = "🎉 You've studied every group in this list! Keep going with the review tests and difficult words.";
+          resultText.className = "result-text correct";
+          return;
+        }
+        currentDifficulty = nextSet;
         difficultySelect.value = currentDifficulty;
       }
       const nextGroup = getNextStudyGroup(currentDifficulty);
       startStudyGroup(nextGroup);
     });
-  }
-
-  if (bookmarkBtn) {
-    bookmarkBtn.addEventListener("click", createBookmark);
   }
 
   // Grade choice (which part of the list to study first)

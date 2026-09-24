@@ -11,11 +11,11 @@ Switch lists with the **Word list** menu. Study progress is saved separately for
 
 ## Features
 
-- **Practice Mode**: Free practice with unlimited words
-- **Quiz Mode**: Test yourself with 10 random words
+- **Practice Mode**: Unlimited practice that doesn't repeat itself: new words first, then words you missed, then the ones you practiced longest ago (your history is saved, so this carries over between visits)
+- **Quiz Mode**: 10 words chosen the same way
 - **Study Mode**: Study 10 words at a time on word cards, then take a test
 - **Review Tests**: Each studied group comes back for a review test the next day; good scores push the next review further out (1, 3, 7, 14, 30 days)
-- **Review Difficult Words**: Focus on words you've missed or marked as challenging
+- **Review Difficult Words**: Missed words go into a difficult-words bank; review them 10 at a time, and a word leaves the bank after you spell it right 2 times in a row
 - **Ask the Pronouncer**: Like a real bee, ask for the definition, a sentence (with the word blanked out), the part of speech, the language of origin, or a root hint
 - **Word Cards**: Definition, example sentence, "sounds like" respelling, language of origin, word parts (prefixes, roots, suffixes), spelling tips, homonym warnings, and a link to Merriam-Webster
 - **Real-Voice Pronunciation**: Recordings of real people from Wikimedia Commons when available, otherwise the best computer voice on the device (voice and speed can be changed; 🐢 Slow plays the word slower)
