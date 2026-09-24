@@ -1,4 +1,5 @@
-// Checks words-2026-27.js against the school's list (tools/school-list-2026-27.txt).
+// Checks words-2026-27.js against the school's list (tools/school-list-2026-27.txt),
+// and the extra One Bee words in words-2026-27-onebee.js.
 //
 // Usage:  node tools/validate-words.mjs
 // Exits with an error if anything is wrong. No npm packages needed.
@@ -11,6 +12,7 @@ import { fileURLToPath } from "node:url";
 const require = createRequire(import.meta.url);
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const words = require(path.join(root, "words-2026-27.js"));
+const oneBee = require(path.join(root, "words-2026-27-onebee.js"));
 
 const school = fs.readFileSync(path.join(root, "tools", "school-list-2026-27.txt"), "utf8")
   .split("\n")
@@ -67,6 +69,22 @@ school.forEach((s, i) => {
   if (w.say != null && (!nonEmpty(w.say) || /[A-Z]{2,}/.test(w.say))) err(w, `"say" must be lowercase text for the computer voice`);
 });
 
+// Extra One Bee words: same fields, no flags, numbered 1-150, not repeating school-list words
+if (!Array.isArray(oneBee) || oneBee.length !== 150) errors.push(`words-2026-27-onebee.js should have 150 words`);
+(oneBee || []).forEach((w, i) => {
+  if (w.n !== i + 1) err(w, `One Bee number should be ${i + 1}`);
+  const key = stripAccents(w.word).toLowerCase();
+  if (seen.has(key)) err(w, "One Bee word repeats another word");
+  seen.add(key);
+  Object.keys(w).forEach((k) => { if (!FIELDS.has(k)) err(w, `unknown field "${k}"`); });
+  ["pos", "definition", "sentence", "origin", "sounds"].forEach((f) => { if (!nonEmpty(w[f])) err(w, `"${f}" is required`); });
+  if (nonEmpty(w.pos) && !POS_HEADS.some((h) => w.pos === h || w.pos.startsWith(`${h} `))) err(w, `pos "${w.pos}" is not a known part of speech`);
+  if (nonEmpty(w.sentence) && !containsWord(w.sentence, w.word)) err(w, "sentence must contain the word");
+  if (!Array.isArray(w.parts)) err(w, `"parts" must be an array`);
+  if (w.flag != null) err(w, "One Bee words have no school-list flag");
+  if (w.say != null && (!nonEmpty(w.say) || /[A-Z]{2,}/.test(w.say))) err(w, `"say" must be lowercase text for the computer voice`);
+});
+
 if (errors.length) {
   errors.forEach((e) => console.error("✗", e));
   console.error(`\n${errors.length} problem(s) found.`);
@@ -74,6 +92,6 @@ if (errors.length) {
 }
 
 const count = (fn) => words.filter(fn).length;
-console.log(`✓ ${words.length} words match the school list, in order.`);
+console.log(`✓ ${words.length} words match the school list, in order, plus ${oneBee.length} extra One Bee words.`);
 console.log(`  word parts: ${count((w) => w.parts.length > 0)}, tips: ${count((w) => w.tip)}, ` +
   `homonym/confusable notes: ${count((w) => w.confuse)}, computer-voice respellings: ${count((w) => w.say)}`);
