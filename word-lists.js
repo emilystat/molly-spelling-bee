@@ -9,8 +9,12 @@
 // Hoover 206 spelling site (https://hoover206.wixsite.com/spelling) study/test slideshows
 // for the Scripps 2027 School list. The school's #1-150 are Scripps "Two Bee" (2.01-2.03)
 // and #151-300 are "Three Bee" (3.01-3.03), in a different order than the school's list.
+// 1.01-1.03 are the Scripps "One Bee" words, which are not on the school's list.
 const HOOVER_SLIDES_BASE = "https://docs.google.com/presentation/d/e/";
 const HOOVER_2027_SLIDES = [
+  { name: "1.01", study: "2PACX-1vR0t4mxsj3NUPeg7y_iaS23FETNJXoyTThyaFxn1dzvfTYanZKhrvLuZ6zgQXQB0b-KaddVjxn8tF5-", test: "2PACX-1vThyTNqmZJh3IA3Vff62KH_oQxg-DpU_FtQdI8BufyUb-OCQf7R8VuRp61PRdfdjy3JXfNfnG0yYxjW" },
+  { name: "1.02", study: "2PACX-1vRNCPPxz1vpNj5NxC8geKSW4gU1sLOpFOKcygoWt7_Q73MO0DSDt_Uh-sHMDivqi-yIHBn082UdRhpA", test: "2PACX-1vT9v95xQYtWN_wLf_uWxLkh9Q0JG13kdta5KMIb0xrBSVQWhEEsNHddbEgQU1NW8f_tI-GNdM5MrZHH" },
+  { name: "1.03", study: "2PACX-1vRmNEefayr_a9Y-diCv9KqNNFFnOaoB91DAuVIs0dD5v4PzjN4MIT2TACqcUeYnPJlL8hgyu_QS6VMD", test: "2PACX-1vR1btOXYISAeYaEUAGFQ27VaKAwiGC-cRon_KclD1f8eAT4ChLJcJ9vk6CfzVD0sFg6xMJUNQm3Hl8r" },
   { name: "2.01", study: "2PACX-1vT6xbaEGRr9fir_wbGuhRvdCabqmVUfgLSX1shSH6n6lNP759Go5N2wbs5X4IlCp6z5N0xIGfYRLWOo", test: "2PACX-1vRDw57C_pArzBJCwnZUHrNZH03n-IvOaABAvQMvlP7s3R_rFZvfP_ZwZXz9Iose6SzoZ3ee1AeYboJA" },
   { name: "2.02", study: "2PACX-1vS4Mtz87dqfr7QpBI4te2QTnkv0fmjcxCHTfSX_vZUHuzawpuWEuC6aShyrUcN0b2mxXLRIEnlf-wet", test: "2PACX-1vTRxT9MwXFpJpAhnwOMbTRhr31oP_nZLYeNMwaJcbPaYhX_VfjChUPb0GrFS_4xWPtMEVrtm8ncfr_g" },
   { name: "2.03", study: "2PACX-1vS6YYpoKE5065r-W6U00lI04jqWLI1QXAiMXaN-dCz89YmtfQ25hCjAXbSDZJFAsf7Z-Cgj2IY2WHrH", test: "2PACX-1vSnRqppjkzWc5hjjoK8_6U9UjkTepQ4wIWTXl_9E7CK6qFBHleTqnZr4hdJmQrK2I3LaVgvmcJT07uc" },
@@ -39,13 +43,25 @@ function buildSchoolSets2026() {
       words: words2026_27.filter(w => w.n >= first && w.n <= last)
     });
   }
+  // Extra practice: the Scripps 2027 One Bee words, in Hoover's sets 1.01-1.03
+  for (let i = 0; i < 3; i++) {
+    const name = `1.0${i + 1}`;
+    sets.push({
+      key: `ob${i + 1}`,
+      label: `One Bee ${name} 🐝 (extra)`,
+      short: `One Bee ${name}`,
+      badge: `One Bee ${name}`,
+      tier: "Extra practice · Scripps One Bee (not on the school list)",
+      words: wordsOneBee2027.slice(i * 50, i * 50 + 50)
+    });
+  }
   return sets;
 }
 
 const WORD_LISTS = {
   "2026-27": {
     id: "2026-27",
-    title: "2026–27 School List (300 words)",
+    title: "2026–27 School List (300 words + One Bee)",
     subtitle: "2026–27 School Spelling Bee · 300 words",
     storageKey: "mollySpellingBee_studyProgress_2026-27",
     sets: buildSchoolSets2026(),
@@ -62,7 +78,11 @@ const WORD_LISTS = {
     ],
     resources: [
       ...HOOVER_2027_SLIDES.map(s => ({
-        group: s.name.startsWith("2") ? "Hoover slideshows for #1–150 (Scripps Two Bee)" : "Hoover slideshows for #151–300 (Scripps Three Bee)",
+        group: {
+          "1": "Hoover slideshows for the extra One Bee sets",
+          "2": "Hoover slideshows for #1–150 (Scripps Two Bee)",
+          "3": "Hoover slideshows for #151–300 (Scripps Three Bee)"
+        }[s.name[0]],
         name: `Set ${s.name}`,
         links: [
           { text: "Study", url: hooverSlidesUrl(s.study) },

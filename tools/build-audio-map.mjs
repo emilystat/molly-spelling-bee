@@ -13,7 +13,7 @@ import { fileURLToPath } from "node:url";
 const require = createRequire(import.meta.url);
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { normalizeWordKey, pickRecordingFile, makeRecording } = require(path.join(root, "audio.js"));
-const words2026 = require(path.join(root, "words-2026-27.js"));
+const words2026 = [...require(path.join(root, "words-2026-27.js")), ...require(path.join(root, "words-2026-27-onebee.js"))];
 const words2025 = require(path.join(root, "words-data.js"));
 
 const USER_AGENT = "MollySpellingBee/1.0 (https://github.com/emilystat/molly-spelling-bee; audio-map builder)";
@@ -140,4 +140,4 @@ ${lines.join(",\n")}
 const found = Object.values(map).filter(Boolean).length;
 const missing = words2026.filter((w) => !map[normalizeWordKey(w.word)]).map((w) => w.word);
 console.log(`Wrote audio-map.js: ${found} of ${unique.length} words have a real recording.`);
-console.log(`2026-27 words with no recording (${missing.length}): ${missing.join(", ")}`);
+console.log(`2026-27 words (incl. One Bee) with no recording (${missing.length}): ${missing.join(", ")}`);

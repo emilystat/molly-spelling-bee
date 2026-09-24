@@ -4,7 +4,7 @@ A web-based spelling practice tool for the school spelling bee, featuring multip
 
 ## Word Lists
 
-- **2026–27 School List (default)**: the 300 words of the *2026-2027 School Spelling Bee List for Classroom and Grade Level Bees*, in the school's order. These are the same words as the Scripps 2027 School Spelling Bee Study List: #1–150 are "Two Bee" words (grades 5–7 start at #1) and #151–300 are "Three Bee" words (grade 8 starts at #151). The list is split into six sets of 50.
+- **2026–27 School List (default)**: the 300 words of the *2026-2027 School Spelling Bee List for Classroom and Grade Level Bees*, in the school's order. These are the same words as the Scripps 2027 School Spelling Bee Study List: #1–150 are "Two Bee" words (grades 5–7 start at #1) and #151–300 are "Three Bee" words (grade 8 starts at #151). The list is split into six sets of 50. For extra practice it also has the 150 Scripps 2027 "One Bee" words (Hoover 206 sets 1.01–1.03), which are not on the school's list.
 - **2025–26 School List**: last year's 450 words (One Bee, Two Bee, Three Bee). Progress saved last year is kept.
 
 Switch lists with the **Word list** menu. Study progress is saved separately for each list.
@@ -35,6 +35,7 @@ Simply open `index.html` in a web browser to start practicing. Your progress is 
 - `style.css` - Styling and layout
 - `word-lists.js` - The word lists, their sets, bee dates, and resource links
 - `words-2026-27.js` - 2026–27 words with definitions, sentences, origins, word parts and tips
+- `words-2026-27-onebee.js` - the extra One Bee words, with the same details
 - `words-data.js` - 2025–26 words with definitions and example sentences
 - `audio-map.js` - Recordings found for each word (generated)
 - `tools/school-list-2026-27.txt` - The school's list, transcribed from the PDF
